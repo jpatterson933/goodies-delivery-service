@@ -50,6 +50,7 @@ Products.init(
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'products',
@@ -65,3 +66,5 @@ Products.init(
 //       "weight": "2.8g",
 //       "brand": "TRAILBLAZER",
 //       "producer": "Alberta Cannabis"
+
+module.exports = Products
