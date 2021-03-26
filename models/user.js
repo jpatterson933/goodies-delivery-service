@@ -52,12 +52,16 @@ User.init (
         type: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
+        }
+    },
+    //need two objects
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'user',
-        
     }
 )
+
+module.exports = User

@@ -65,3 +65,5 @@ Products.init(
 //       "weight": "2.8g",
 //       "brand": "TRAILBLAZER",
 //       "producer": "Alberta Cannabis"
+
+module.exports = Products

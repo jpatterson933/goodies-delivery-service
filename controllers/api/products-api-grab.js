@@ -1,5 +1,5 @@
 //------------------------USED FOR GRABBING PRODUCTS --- NO ASSOCIATED ROUTES YET--------------------//
-
+const router = require('express').Router();
 
 const axios = require('axios').default;
 require('dotenv').config();
@@ -33,3 +33,5 @@ const options = {
   }).catch(function (error) {
       console.error(error);
   });
+
+  module.exports = router
