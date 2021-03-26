@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoodDeez, ARE YOU 21?!</title>
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to GoodDeez!</h1>
+    </header>
+    
+    <div class ="confirmation">
+        <div class="conf21">
+            <div class="confQ21">Are you 21 years or older?</div>
+                <div class="buttons21">
+                    {{#if olderThan21}}
+                    <button class="buttonY" type="button">Yes let me see the goodies!</button>
+                    {{else}}
+                    <button class="buttonN" type="button">No, I am not :(</button>
+                    {{/if}}
+                </div>
+        </div>
+    </div>
+    {{#if olderThan21}}
+    <script src="/js/login"></script>
+    {{else}}
+    <a href="/tomatoes">tomatoes page</a>
+    {{/if}}
+</body>
+
+</html>

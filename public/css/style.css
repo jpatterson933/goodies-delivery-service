@@ -1,0 +1,55 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+
+.conifirmation {
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.conf21 {
+    padding: 40px 45px 5px;
+}
+
+.confQ21 {
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 18px;
+    color: black;
+    outline: none;
+    font-weight: 500;
+}
+
+.buttons21 {
+    width: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.buttonY {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.buttonN{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+  
+}
+
