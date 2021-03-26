@@ -2,7 +2,7 @@
 const router = require('express').Router();
 
 const axios = require('axios').default;
-require('dotenv').config();
+
 
 // axios.get('https://api.github.com/orgs/axios')
 //   .then(response => {
@@ -27,7 +27,7 @@ const options = {
         for (let i = 0; i < response.data.length; i++) {       
        
       }
-      console.log(response.data)
+      // console.log(response.data)
     
     //   console.log(response.data);
   }).catch(function (error) {
