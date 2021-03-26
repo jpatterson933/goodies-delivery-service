@@ -1,25 +1,66 @@
-<h2>Login</h2>
+<!--login form card -->
+  <div class="login-card">
+    <h2>Login</h2>
+    <form class="form loginForm">
+      <div class="formGroup">
+        <label for="emailLogin">Email:</label>
+        <input class="formInput" type="text" id="emailLogin"/>
+      </div>
+      <div class="formGroup">
+        <label for="passwordLogin">Password:</label>
+        <input class="formInput" type="password" id="passwordLogin"/>
+      </div>
+      <div class"formGroup">
+        <label for="userType">Select User Type: </label>
+        <select id="userType" name="userChoice" form="userForm">
+          <option value="buyer">Consumer</option>
+          <option value="delivery">Delivery Driver</option>
+        </select>
+      </div>  
+      <div class="formGroup">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
+  </div>
 
-<form class="form login-form">
-  <div class="form-group">
-    <label for="email-login">email:</label>
-    <input class="form-input" type="text" id="email-login" />
+<!--sign up form card-->
+<div class="loginCard"> 
+<form class="form signinForm">
+  <div class="formGroup">
+    <label for="nameSignup">Name:</label>
+    <input class="formInput" type="text" id="nameSignup"/>
+  </div>  
+  <div class="formGroup">
+    <label for="emailSignup">email:</label>
+    <input class="formInput" type="text" id="emailSignup"/>
+  </div>
+  <div class="formGroup">
+    <label for="adrSignup">address:</label>
+    <input class="formInput" type="url" id="adrSignup"/>
+  </div>
+  <div class="formGroup">
+    <label for="dobSignup">Date Of Birth:</label>
+    <input class="formInput" type="date" id="dobSignup"/>
+  </div>
+  <div class="formGroup">
+    <label for="phoneSignup">Phone Number:</label>
+    <input class="form-input" type="tel" id="phoneSignup"/>
   </div>
   <div class="form-group">
-    <label for="address-login">address:</label>
-    <input class="form-input" type="address" id="address-login" />
+    <label for="passwordSignup">Password:</label>
+    <input class="form-input" type="password" id="passwordSignup"/>
   </div>
+  <div class"form-group">
+    <label for="usrTypSignup">Select User Type: </label>
+    <select id="usrTypSignup" name="userChoice" form="userForm">
+        <option value="Buyer">Consumer</option>
+        <option value="Delivery">Delivery Driver</option>
+    </select>
+  </div>  
   <div class="form-group">
-    <label for="dob-login">Date Of Birth:</label>
-    <input class="form-input" type="integer" id="password-login" />
-  </div>
-  <div class="form-group">
-    <label for="password-login">:</label>
-    <input class="form-input" type="password" id="password-login" />
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit">login</button>
+    <button class="btn btn-primary" type="submit">Submit</button>
   </div>
 </form>
+</div>
 
 <script src="/js/login.js"></script>
