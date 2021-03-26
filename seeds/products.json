@@ -1,0 +1,72 @@
+[
+    {
+      "name": "Balance",
+      "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/00300820/00300820_1.jpg?h=625&w=770&vr=20210321055602&hash=9461C5F22DEFFF7006B3C27F91DF9D11D055911A",
+      "thc": "25-125 mg/g",
+      "cbd": "35.5-150 mg/g",
+      "price": 4.99,
+      "weight": "0.5g",
+      "brand": "Solei",
+      "producer": "Alberta Cannabis"
+    },
+    {
+      "name": "THC Dark Chocolate",
+      "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/04201276/04201276_1.jpg?h=625&w=770&vr=20200517043242&hash=0571C66F4280EACBD74C52846DBBEFC9D603622B",
+      "thc": "10 mg",
+      "cbd": "0 mg",
+      "price": 4.49,
+      "weight": "0.66g",
+      "brand": "Legend",
+      "producer": "Alberta Cannabis"
+    },
+    {
+      "name": "Snax Pure Milk Chocolate",
+      "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/01001942/01001942_1.jpg?h=625&w=770&vr=20201130211453&hash=9AC6775AA9233C61F908D37C62F1BDE15C560B5F",
+      "thc": "10 mg",
+      "cbd": "0-0.25 mg",
+      "price": 4.69,
+      "weight": "2.8g",
+      "brand": "TRAILBLAZER",
+      "producer": "Alberta Cannabis"
+    },
+    {
+      "name": "THC Orange Dark Chocolate",
+      "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/04201593/04201593_1.jpg?h=625&w=770&vr=20200925151520&hash=6A55F40F0AF7FA80366C5C11060FD16D4572E046",
+      "thc": "10 mg",
+      "cbd": "0 mg",
+      "price": 4.49,
+      "weight": "0.66g",
+      "brand": "Legend",
+      "producer": "Alberta Cannabis"
+    },
+    {
+      "name": "Snax Mocha Milk Chocolate",
+      "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/01000999/01000999_1.jpg?h=625&w=770&vr=20200606061834&hash=4BA9F10B32BF14DEE01FFE461E0D23A279E0548F",
+      "thc": "10 mg",
+      "cbd": "0 mg",
+      "price": 4.69,
+      "weight": "2.8g",
+      "brand": "TRAILBLAZER",
+      "producer": "Alberta Cannabis"
+    },
+    {
+      "name": "THC Raspberry Milk Chocolate",
+      "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/04201594/04201594_1.jpg?h=625&w=770&vr=20200925151522&hash=2A28842A75CFB3AA285139E1A5926472C2B0B297",
+      "thc": "10 mg",
+      "cbd": "0 mg",
+      "price": 4.49,
+      "weight": "0.66g",
+      "brand": "Legend",
+      "producer": "Alberta Cannabis"
+    },
+    {
+      "name": "Snax Mint Milk Chocolate",
+      "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/01001000/01001000_1.jpg?h=625&w=770&vr=20200606061837&hash=9F8385454F86CC39A5281EB9787EC5C89259510B",
+      "thc": "10 mg",
+      "cbd": "0 mg",
+      "price": 4.69,
+      "weight": "2.8g",
+      "brand": "TRAILBLAZER",
+      "producer": "Alberta Cannabis"
+    }
+]
