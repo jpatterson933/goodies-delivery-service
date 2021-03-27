@@ -3,7 +3,7 @@ const { Users } = require('../../models')
 
 
 router.get('/', async (req, res) => {
-    const userData = await User.findAll()
+    const userData = await Users.findAll()
     res.json(userData) 
 })
 
