@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
+class Users extends Model {
 
 //we need a check password
 /* checkPassword(loginPw) {
@@ -10,7 +10,7 @@ class User extends Model {
 }*/
 }
 
-User.init (
+Users.init (
     {
         id: {
             type: DataTypes.INTEGER,
@@ -31,7 +31,7 @@ User.init (
             },
         },
         cell: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.BIGINT,
             allowNull: false,
             validate: {
                 isNumeric: true,
@@ -60,8 +60,8 @@ User.init (
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'users',
     }
 )
 
-module.exports = User
+module.exports = Users
