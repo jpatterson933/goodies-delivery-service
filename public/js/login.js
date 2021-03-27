@@ -46,6 +46,6 @@ const signiForm = async (event) => {
 };
 
 document
-    .querySelector('.login-form')
+    .querySelector('.loginForm')
     .addEventListener('submit', loginForm);
 

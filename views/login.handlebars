@@ -1,5 +1,5 @@
 <!--login form card -->
-  <div class="login-card">
+  <div class="loginCard">
     <h2>Login</h2>
     <form class="form loginForm">
       <div class="formGroup">
@@ -34,6 +34,7 @@
     <label for="emailSignup">email:</label>
     <input class="formInput" type="text" id="emailSignup"/>
   </div>
+
   <div class="formGroup">
     <label for="adrSignup">address:</label>
     <input id="autoAddress" placeholder="Enter your address" onFocus="geolocate()" type="text" class="formGroup">
@@ -41,17 +42,17 @@
         <div class="row">
           <div class="col-md-6">
             <label class="controlGroup">Street address</label>
-            <input class="formInput" id="street_number" disabled="true">
+            <input class="formInput" id="streetNumber" disabled="true">
           </div>
           <div class="col-md-6">
-            <label class="controlGroup">Route</label>
-            <input class="formInput" id="route" disabled="true">
+            <label class="controlGroup">Street Name</label>
+            <input class="formInput" id="streetName" disabled="true">
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
             <label class="controlGroup">City</label>
-            <input class="formInput" id="locality" disabled="true">
+            <input class="formInput" id="city" disabled="true">
           </div>
           <div class="col-md-6"> 
             <label class="controlGroup">State</label>
@@ -61,7 +62,7 @@
         <div class="row">
           <div class="col-md-6">
             <label class="controlGroup">Zip code</label>
-            <input class="formInput" id="postal_code" disabled="true">
+            <input class="formInput" id="postalCode" disabled="true">
           </div>
           <div class="col-md-6">
             <label class="controlGroup">Country</label>
@@ -70,6 +71,7 @@
         </div>
       </div>
   </div>
+
   <div class="formGroup">
     <label for="dobSignup">Date Of Birth:</label>
     <input class="formInput" type="date" id="dobSignup"/>
@@ -96,5 +98,9 @@
 </div>
 
 <script src="/js/login.js"></script>
- <script async defer src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&callback=initMap"
+<script src="auto-complete.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script async defer src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&callback=initMap"
   type="text/javascript"></script>
