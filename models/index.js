@@ -1,4 +1,4 @@
-const User = require('./user')
+const Users = require('./users')
 const Products = require('./products')
 
 
@@ -10,4 +10,4 @@ const Products = require('./products')
 
 
 
-module.exports = { User, Products }
+module.exports = { Users, Products }

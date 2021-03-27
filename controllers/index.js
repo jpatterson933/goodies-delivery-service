@@ -2,6 +2,7 @@ const router = require('express').Router();
 
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes')
+const login = require('./login')
 
 //this connects our homeroutes
 router.use('/', homeRoutes)
