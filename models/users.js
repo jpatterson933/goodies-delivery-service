@@ -30,7 +30,7 @@ Users.init (
                 isBefore: "2020-03-26"
             },
         },
-        cell: {
+        phoneNum: {
             type: DataTypes.BIGINT,
             allowNull: false,
             validate: {
@@ -52,16 +52,33 @@ Users.init (
         type: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        passowrd: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [10],
+            },
+        },
     },
     //need two objects
     {
+        hooks: {
+            beforeCreate: async (newUserData) => {
+                newUserData.password = await bcrypt.hash(newUserData.password);
+                return newUserData;
+            },
+            beforeUpdate: async(updatedUserData) => {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password);
+                return updatedUserData;
+            },
+        },
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'users',
-    }
-)
+    },
+);
 
 module.exports = Users

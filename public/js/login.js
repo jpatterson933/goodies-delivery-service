@@ -6,7 +6,7 @@ const loginForm = async (event) => {
     const userT = document.querySelector('#userType').value;
 
     if (email && password && userT) {
-        const response = await fetch('', {
+        const response = await fetch('/api/users', {
             method: 'POST',
             body: JSON.stringify({ email, passowrd, userT}),
             headers: {},
@@ -19,7 +19,7 @@ const loginForm = async (event) => {
     }
 };
 
-const signiForm = async (event) => {
+const signupForm = async (event) => {
     event.preventDefault();
 
     const name = document.querySelector('#nameSignup').value.trim();
@@ -32,7 +32,7 @@ const signiForm = async (event) => {
 
 
     if (name && email && address && dob && phoneNum && password && userType){
-        const response = await fetch('', {
+        const response = await fetch('/api/users', {
             method: 'POST',
             body: JSON.stringify({ name, email, address, dob, phoneNum, password, userType}),
             headers: {},
@@ -48,4 +48,8 @@ const signiForm = async (event) => {
 document
     .querySelector('.loginForm')
     .addEventListener('submit', loginForm);
+
+document
+    .querySelector('.loginForm')
+    .addEventListener('submit', signupForm);
 
