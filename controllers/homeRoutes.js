@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { Products } = require('../models')
+const { Products, Users, Cart, Address } = require('../models')
 
 router.get('/', async (req, res) => {
-    res.render('homepage')
+    // res.render('homepage')
     res.render('twentyone')
 })
 
@@ -50,9 +50,33 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
-router.get('/profile', (req, res) => {
-    res.render('profile')
-})
+  router.get('/profile', async (req, res) => {
+    try {
+        const profileData = await Users.findAll();
+        const profile = profileData.map((Users) => 
+            Users.get({ plain: true }));
+        res.render('profile', { profile });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+
+});
+
+router.get('/homepage', async (req, res) => {
+    try {
+        const productData = await Products.findAll();
+        const product = productData.map((products) => 
+            products.get({ plain: true }));
+        const ranIndex = Math.floor(Math.random()*(product.length-1))
+        console.log(ranIndex);
+        res.render('homepage',  product[ranIndex] );
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+
+});
 
 router.get('/cart', (req, res) => {
     res.render('cart')
