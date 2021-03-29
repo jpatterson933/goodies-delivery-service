@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Products, Users, Cart, Address } = require('../models')
+const withAuth = require('../utils/auth')
 
 router.get('/', async (req, res) => {
     // res.render('homepage')
@@ -50,9 +51,9 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
-  router.get('/users/:id', async (req, res) => {
+  router.get('/profile', withAuth, async (req, res) => {
     try {
-        const profileData = await Users.findByPk(req.params.id);
+        const profileData = await Users.findByPk(req.session.user_id);
         const profile = profileData.get({ plain: true });
         res.render('profile',  profile );
     } catch (err) {
@@ -87,6 +88,21 @@ router.get('/cart', (req, res) => {
 router.get('/signup', (req, res) => {
     res.render('signup')
 })
+
+
+
+router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+      // Remove the session variables
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
+
+
 
   
 
