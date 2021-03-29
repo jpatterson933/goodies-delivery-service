@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Products } = require('../models')
+const { Products, Users, Cart, Address } = require('../models')
 
 router.get('/', async (req, res) => {
     res.render('homepage')
@@ -54,9 +54,31 @@ router.get('/profile', (req, res) => {
     res.render('profile')
 })
 
+// this is all our cart stuff 
 router.get('/cart', (req, res) => {
-    res.render('cart')
-})
+    console.log(data.products);
+  return res.json(data.products);
+});
+
+router.post('/cart', (req, res) => {
+    let products = [], id = null;
+    let cart = JSON.parse(req.body.cart);
+    if (!cart) return res.json(products)
+    for (var i = 0; i < data.products.length; i++) {
+        id = data.products[i].id.toString();
+        if (cart.hasOwnProperty(id)) {
+            data.products[i].qty = cart[id]
+            products.push(data.products[i]);
+        }
+    }
+    return res.json(products);
+});
+//update cart item 
+// router.update('/cart', async (req, res) => {
+// })
+// //delete cart item
+// router.delete('/cart', async (req,res) => {
+// })
 
 
 // Create get route that has over21 boolean. If over21, then render /homepage. '/' route needs to be over21 page, and will redirect
