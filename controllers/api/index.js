@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const productsApi = require('./products-api-grab');
+const productsApi = require('./productRoutes');
 const userRoutes = require('./userRoutes');
 
 

@@ -5,9 +5,31 @@ const axios = require('axios').default;
 const { Products } = require('../../models');
 
 router.get('/', async (req, res) => {
-  const productsData = await Products.findAll()
-  res.json(productsData) 
-})
+    const productsData = await Products.findAll(
+        {
+            name: req.body.name,
+            thc: req.body.thc,
+            cbd: req.body.cbd,
+            price: req.body.price
+        },
+    ).catch((err) => {
+        res.json(err);
+    });
+    //here I am able to post the array index 1
+    res.json(productsData[3]);
+});
+
+//creates new products we do not need
+// router.post('/', async (req, res) => {
+//     try {
+//         const productsData = await Products.create(req.body);
+//         res.status(200).json(productsData);
+//     } catch (err) {
+//         res.status(400).json(err);
+//     }
+//     res.render('products')
+// })
+
 
 
 
