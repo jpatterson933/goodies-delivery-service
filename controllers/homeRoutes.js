@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const { Products } = require('../models')
 
 router.get('/', async (req, res) => {
     res.render('homepage')
@@ -9,9 +9,23 @@ router.get('/', async (req, res) => {
 //     res.render('login')
 // })
 
+// router.get('/products', async (req, res) => {
+//     res.render('products')
+// })
+
+
 router.get('/products', async (req, res) => {
-    res.render('products')
-})
+    try {
+        const productData = await Products.findAll();
+        const product = productData.map((products) => 
+            products.get({ plain: true }));
+        res.render('products', { product });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+
+});
 
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
