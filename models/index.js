@@ -11,9 +11,14 @@ Products.belongsToMany(Users, {
     as: 'users'
 });
 
-Users.hasMany(Products, {
+Users.belongsToMany(Products, {
     foreignKey:'user_id',
-});
+    through:{
+        model: Cart,
+        unique:false
+    },
+    as: 'products'
+})
 
 
 
@@ -22,4 +27,8 @@ Users.hasMany(Products, {
 // });
 
 
-module.exports = { Users, Products, Cart }
+module.exports = { 
+    Users, 
+    Products, 
+    Cart,
+};
