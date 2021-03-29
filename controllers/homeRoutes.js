@@ -3,6 +3,7 @@ const { Products } = require('../models')
 
 router.get('/', async (req, res) => {
     res.render('homepage')
+    res.render('twentyone')
 })
 
 // router.get('/login', async (req, res) => {
