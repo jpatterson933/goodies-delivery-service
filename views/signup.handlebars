@@ -33,38 +33,32 @@
             <input class="formInput" type="tel" id="phoneSignup"/>
         </div>
         <div class="formGroup">
-            <label for="adrSignup">address:</label>
-            <input id="autoAddress" placeholder="Enter your address" onFocus="geolocate()" type="text" class="formGroup">
             <div id="address">
                 <div class="row">
-                <div class="col-md-6">
-                    <label class="controlGroup">Street address</label>
-                    <input class="formInput" id="street_number" disabled="true">
-                </div>
-                <div class="col-md-6">
-                    <label class="controlGroup">Route</label>
-                    <input class="formInput" id="route" disabled="true">
-                </div>
+                    <div class="col-md-6">
+                        <label class="controlGroup">Street address</label>
+                        <input class="formInput" id="street_number">
+                    </div>
                 </div>
                 <div class="row">
                 <div class="col-md-6">
                     <label class="controlGroup">City</label>
-                    <input class="formInput" id="city" disabled="true">
+                    <input class="formInput" id="city">
                 </div>
                 <div class="col-md-6"> 
                     <label class="controlGroup">State</label>
-                    <input class="formInput" id="state" disabled="true">
+                    <input class="formInput" id="state">
                 </div>
                 </div>
                 <div class="row">
-                <div class="col-md-6">
-                    <label class="controlGroup">Zip code</label>
-                    <input class="formInput" id="postal_code" disabled="true">
-                </div>
-                <div class="col-md-6">
-                    <label class="controlGroup">Country</label>
-                    <input class="formInput" id="country" disabled="true">
-                </div>
+                    <div class="col-md-6">
+                        <label class="controlGroup">Zip code</label>
+                        <input class="formInput" id="postal_code">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="controlGroup">Country</label>
+                        <input class="formInput" id="country">
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,5 +69,3 @@
 </div>
 
 <script src="/js/login.js"></script>
- <script async defer src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&callback=initMap"
-  type="text/javascript"></script>
