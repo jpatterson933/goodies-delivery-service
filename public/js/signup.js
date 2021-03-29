@@ -1,20 +1,23 @@
+
+
+
 const signupForm = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#nameSignup').value.trim();
+    const type= document.querySelector('#userType').value;
     const email = document.querySelector('#emailSignup').value.trim();
-    const address = document.querySelector('#autoAddress').value.trim();
-    const dob = document.querySelector('#dobSignup').value.trim();
-    const phoneNum = document.querySelector('#phoneSignup').value.trim();
     const password = document.querySelector('#passwordSignup').value.trim();
     const verifyPassword = document.querySelector('#verifyPassword').value.trim(); //we will use this to verify password
-    const userType= document.querySelector('#userType').value;
+    const name = document.querySelector('#nameSignup').value.trim();
+    const birth = document.querySelector('#dobSignup').value.trim();
+    const cell = document.querySelector('#phoneSignup').value.trim();
+    const address = document.querySelector('#autoAddress').value.trim();
 
 
-    if (name && email && address && dob && phoneNum && password && userType){
+    if (name && email && address && birth && cell && password && type){
         const response = await fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({ name, email, address, dob, phoneNum, password, userType}),
+            body: JSON.stringify({ name, email, address, birth, cell, password, type}),
             headers: {},
         });
         if (response.ok) {
@@ -24,3 +27,7 @@ const signupForm = async (event) => {
         }
     }
 };
+
+document
+    .querySelector('.signup-form')
+    .addEventListener('submit', signupForm);

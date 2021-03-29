@@ -18,24 +18,9 @@ Users.init (
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        type: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        birth: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                //is there a way to make this current day minus 21 years?
-                isBefore: "2020-03-26"
-            },
-        },
-        cell: {
-            type: DataTypes.BIGINT,
-            allowNull: false,
-            validate: {
-                isNumeric: true,
-            },
         },
         email: {
             type: DataTypes.STRING,
@@ -45,14 +30,36 @@ Users.init (
                 isEmail: true,
             },
         },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [6],
+            },
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        birth: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                //is there a way to make this current day minus 21 years?
+                isBefore: "09/11/2003"
+            },
+        },
+        cell: {
+            type: DataTypes.BIGINT,
+            allowNull: false,
+            validate: {
+                isNumeric: true,
+            },
+        },
         address: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        type: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }
     },
     //need two objects
     {

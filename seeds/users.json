@@ -1,11 +1,12 @@
 [
     {
+        "type": "Consumer",
+        "email": "jeff@jeff.com",
+        "password": "123456",
         "name": "Jeff",
         "birth": "09-03-1990",
         "cell": 5555555555,
-        "email": "jeff@jeff.com",
-        "address": "address 123 Los Angeles",
-        "type": "Consumer"
+        "address": "address 123 Los Angeles"
     }
 
 ]
