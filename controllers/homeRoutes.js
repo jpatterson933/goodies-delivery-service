@@ -72,6 +72,10 @@ router.get('/profile', (req, res) => {
 router.get('/cart', (req, res) => {
     res.render('cart')
 })
+
+router.get('/signup', (req, res) => {
+    res.render('signup')
+})
   
 
 module.exports = router;
