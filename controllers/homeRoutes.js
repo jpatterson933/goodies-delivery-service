@@ -28,33 +28,18 @@ router.get('/products', async (req, res) => {
 
 });
 
-// router.get('/products/:id', async (req, res) => {
-//     try {
-//         const productId = await Products.findByPk(req.params.id, {
-//             include: [
-//                 {
-//                     model: Products,
-//                     attributes: [
-//                         'id',
-//                         'name',
-//                         'thc',
-//                         'cbd',
-//                         'price',
-//                         'weight',
-//                     ],
-//                 },
-//             ],
-            
-//         });
+router.get('/products/:id', async (req, res) => {
+    try {
+        const productId = await Products.findByPk(req.params.id);
 
-//         const prodId = productId.get({ plain: true });
-//         res.render('products', { prodId });
-//     } catch (err) {
-//         console.log(err);
-//         res.status(500).json(err);
-//     }
+        const prodId = productId.get({ plain: true });
+        res.render('product',  prodId );
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
 
-// });
+});
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     // if (req.session.logged_in) {
@@ -72,6 +57,8 @@ router.get('/profile', (req, res) => {
 router.get('/cart', (req, res) => {
     res.render('cart')
 })
+
+// Create get route that has over21 boolean. If over21, then render /homepage. '/' route needs to be over21 page, and will redirect
   
 
 module.exports = router;
