@@ -50,12 +50,11 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
-  router.get('/profile', async (req, res) => {
+  router.get('/users/:id', async (req, res) => {
     try {
-        const profileData = await Users.findAll();
-        const profile = profileData.map((Users) => 
-            Users.get({ plain: true }));
-        res.render('profile', { profile });
+        const profileData = await Users.findByPk(req.params.id);
+        const profile = profileData.get({ plain: true });
+        res.render('profile',  profile );
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
