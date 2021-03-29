@@ -7,28 +7,41 @@
   <title>Goodies</title>
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  
+ 
 </head>
 
 <body>
     <header>
-        <h1>
-            <a href="/">Welcome to GoodDeez!</a>
+        <h1 id="main-title">
+            <a href="/" id="home-link">Welcome to GoodDeez!</a>
         </h1>
-        <nav>
-            <a href="/profile">Profile</a>
-            <a class="display-products" href="/products">Products</a>
-            <a href="/cart">Cart</a>       
-            <a href="login">Login</a>     
+        <nav class="navbar navbar-light" id="main-nav">
+            <a href="/profile" class="col-3">Profile</a>
+            <a href="/products" class="col-3 products-link">Products</a>
+            <a href="/cart" class="col-3">Cart</a>       
+            <a href="login" class="col-3">Login</a>     
         </nav>
     </header>
+
     
     <main class ="container container-fluid mt-5">
         {{{ body }}}
     </main>
+
+    
     <footer>
+        <nav class="navbar navbar-light" id="footer-bg">
+            <a class="navbar-brand" href="#" id="footer-text">deeznugs LLC</a>
+        </nav>
+        
 
     </footer>
 
+     
+<script src='/js/display-products.js'></script>
 </body>
 
 </html>
