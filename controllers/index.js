@@ -8,6 +8,8 @@ const signup = require('./signup')
 //this connects our homeroutes
 router.use('/', homeRoutes);
 
+
+//grabs all of our api routes
 router.use('/api', apiRoutes);
 
 router.use('/login', login);

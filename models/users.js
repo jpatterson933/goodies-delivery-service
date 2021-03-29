@@ -42,7 +42,7 @@ Users.init (
             allowNull: false,
         },
         birth: {
-            type: DataTypes.STRING,
+            type: DataTypes.DATE,
             allowNull: false,
             validate: {
                 //is there a way to make this current day minus 21 years?
@@ -50,15 +50,11 @@ Users.init (
             },
         },
         cell: {
-            type: DataTypes.BIGINT,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 isNumeric: true,
             },
-        },
-        address: {
-            type: DataTypes.STRING,
-            allowNull: false,
         },
     },
     //need two objects

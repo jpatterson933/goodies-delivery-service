@@ -1,6 +1,7 @@
 const Users = require('./users')
 const Products = require('./products')
 const Cart = require('./cart')
+const Address = require('./address')
 
 Products.belongsToMany(Users, {
     foreignKey:'products_id',
@@ -31,4 +32,5 @@ module.exports = {
     Users, 
     Products, 
     Cart,
+    Address,
 };

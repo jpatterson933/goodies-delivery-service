@@ -46,4 +46,6 @@ Address.init(
         underscored: true,
         modelName: 'address',
     }
-)
+);
+
+module.exports = Address
