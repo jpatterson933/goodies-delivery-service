@@ -3,8 +3,8 @@ const sequelize = require('../config/connection');
 
 class Cart extends Model {}
 
-
 Cart.init(
+
 {
     sequelize,
     timestamps: false,
