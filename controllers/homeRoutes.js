@@ -58,7 +58,13 @@ router.get('/cart', (req, res) => {
     res.render('cart')
 })
 
+
 // Create get route that has over21 boolean. If over21, then render /homepage. '/' route needs to be over21 page, and will redirect
+
+router.get('/signup', (req, res) => {
+    res.render('signup')
+})
+
   
 
 module.exports = router;
