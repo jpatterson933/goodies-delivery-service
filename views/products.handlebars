@@ -1,89 +1,21 @@
-{{!-- <h1 id="product-name"></h1>
-<section id="thc-content"></section>
-<div id="cbd-content"></div>
-<div id="product-price"></div>
-<div id="product-weight"></div>
-<div id="brand"></div>
-<div id="producer"></div>
 
-
-<script src="/js/display-products.js"></script> --}}
-
-
-
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.container {
-  position: relative;
-  width: 50%;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .image {
-  opacity: 0.3;
-}
-
-.container:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-</style>
-</head>
-<body>
-
-
-{{#each product as |products|}}
-
-<div class="container">
-
-
-  <img src="{{image}}" alt="Avatar" class="image" style="width:100%">
-  <div class="middle">
-    <div class="text">
-        <h4>{{name}}</h4>
-        <ul>
-            <li>THC: {{thc}}</li>
-            <li>CBD: {{cbd}}</li>
-            <li>Price: ${{price}}</li>
-            <li>Weight: {{weight}}</li>
-            <li>Brand: {{brand}}</li>
-
-        </ul>
-
+<div id="product-wrap">
+    {{#each product as |products|}}
+    <div>
+        <div class="container">
+        <img src="{{image}}" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+            <div class="text">
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text">{{thc}} THC</p>
+                <p class="card-text">{{cbd}} CBD</p>
+                <p class="card-text">${{price}}</p>
+                <p class="card-text">Weight: {{weight}}</p>
+                <p class="card-text">Brand: {{brand}}</p>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>  
+        </div>
     </div>
-  </div>  
-  
-
+    {{/each}}
 </div>
-
-{{/each}}
-</body>
-
-</html>

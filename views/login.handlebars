@@ -1,4 +1,3 @@
-<!--login form card -->
   <div class="login-card">
     <h2>Login</h2>
     <form class="form loginForm">
@@ -10,91 +9,8 @@
         <label for="passwordLogin">Password:</label>
         <input class="formInput" type="password" id="passwordLogin"/>
       </div>
-      <div class"formGroup">
-        <label for="userType">Select User Type: </label>
-        <select id="userType" name="userChoice" form="userForm">
-          <option value="buyer">Consumer</option>
-          <option value="delivery">Delivery Driver</option>
-        </select>
-      </div>  
       <div class="formGroup">
         <button class="btn btn-primary" type="submit">login</button>
       </div>
     </form>
   </div>
-
-<!--sign up form card-->
-<div class="loginCard"> 
-<form class="form signinForm">
-  <div class="formGroup">
-    <label for="nameSignup">Name:</label>
-    <input class="formInput" type="text" id="nameSignup"/>
-  </div>  
-  <div class="formGroup">
-    <label for="emailSignup">email:</label>
-    <input class="formInput" type="text" id="emailSignup"/>
-  </div>
-  <div class="formGroup">
-    <label for="adrSignup">address:</label>
-    <input id="autoAddress" placeholder="Enter your address" onFocus="geolocate()" type="text" class="formGroup">
-      <div id="address">
-        <div class="row">
-          <div class="col-md-6">
-            <label class="controlGroup">Street address</label>
-            <input class="formInput" id="street_number" disabled="true">
-          </div>
-          <div class="col-md-6">
-            <label class="controlGroup">Route</label>
-            <input class="formInput" id="route" disabled="true">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <label class="controlGroup">City</label>
-            <input class="formInput" id="locality" disabled="true">
-          </div>
-          <div class="col-md-6"> 
-            <label class="controlGroup">State</label>
-            <input class="formInput" id="state" disabled="true">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <label class="controlGroup">Zip code</label>
-            <input class="formInput" id="postal_code" disabled="true">
-          </div>
-          <div class="col-md-6">
-            <label class="controlGroup">Country</label>
-            <input class="formInput" id="country" disabled="true">
-          </div>
-        </div>
-      </div>
-  </div>
-  <div class="formGroup">
-    <label for="dobSignup">Date Of Birth:</label>
-    <input class="formInput" type="date" id="dobSignup"/>
-  </div>
-  <div class="formGroup">
-    <label for="phoneSignup">Phone Number:</label>
-    <input class="formInput" type="tel" id="phoneSignup"/>
-  </div>
-  <div class="formGroup">
-    <label for="passwordSignup">Password:</label>
-    <input class="formInput" type="password" id="passwordSignup"/>
-  </div>
-  <div class="formGroup">
-    <label for="usrTypSignup">Select User Type: </label>
-    <select id="usrTypSignup" name="userChoice" form="userForm">
-        <option value="Buyer">Consumer</option>
-        <option value="Delivery">Delivery Driver</option>
-    </select>
-  </div>  
-  <div class="formGroup">
-    <button class="btn btn-primary" type="submit">Submit</button>
-  </div>
-</form>
-</div>
-
-<script src="/js/login.js"></script>
- <script async defer src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&callback=initMap"
-  type="text/javascript"></script>
