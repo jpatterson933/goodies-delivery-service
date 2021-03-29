@@ -1,73 +1,73 @@
 <!--sign up form card-->
-<div class="loginCard"> 
-    <form class="form signinForm">
-    <div class="formGroup">
-        <label for="nameSignup">Name:</label>
-        <input class="formInput" type="text" id="nameSignup"/>
-    </div>  
-    <div class="formGroup">
-        <label for="emailSignup">email:</label>
-        <input class="formInput" type="text" id="emailSignup"/>
-    </div>
-    <div class="formGroup">
-        <label for="adrSignup">address:</label>
-        <input id="autoAddress" placeholder="Enter your address" onFocus="geolocate()" type="text" class="formGroup">
-        <div id="address">
-            <div class="row">
-            <div class="col-md-6">
-                <label class="controlGroup">Street address</label>
-                <input class="formInput" id="street_number" disabled="true">
-            </div>
-            <div class="col-md-6">
-                <label class="controlGroup">Route</label>
-                <input class="formInput" id="route" disabled="true">
-            </div>
-            </div>
-            <div class="row">
-            <div class="col-md-6">
-                <label class="controlGroup">City</label>
-                <input class="formInput" id="city" disabled="true">
-            </div>
-            <div class="col-md-6"> 
-                <label class="controlGroup">State</label>
-                <input class="formInput" id="state" disabled="true">
-            </div>
-            </div>
-            <div class="row">
-            <div class="col-md-6">
-                <label class="controlGroup">Zip code</label>
-                <input class="formInput" id="postal_code" disabled="true">
-            </div>
-            <div class="col-md-6">
-                <label class="controlGroup">Country</label>
-                <input class="formInput" id="country" disabled="true">
-            </div>
+<div class="signup-form"> 
+    <form class="form">
+        <div class="formGroup">
+                <label for="userType">Select User Type: </label>
+            <select id="userType" name="userChoice" form="userForm">
+                <option value="Buyer">Consumer</option>
+                <option value="Delivery">Delivery Driver</option>
+            </select>
+        </div>  
+        <div class="formGroup">
+            <label for="emailSignup">email:</label>
+            <input class="formInput" type="text" id="emailSignup"/>
+        </div>
+        <div class="formGroup">
+            <label for="passwordSignup">Choose Password:</label>
+            <input class="formInput" type="password" id="passwordSignup"/>
+        </div>
+        <div class="formGroup">
+            <label for="verifyPassword">Confirm Password:</label>
+            <input class="formInput" type="password" id="verifyPassword"/>
+        </div>
+        <div class="formGroup">
+            <label for="nameSignup">Name:</label>
+            <input class="formInput" type="text" id="nameSignup"/>
+        </div>  
+        <div class="formGroup">
+            <label for="dobSignup">Date Of Birth:</label>
+            <input class="formInput" type="date" id="dobSignup"/>
+        </div>
+        <div class="formGroup">
+            <label for="phoneSignup">Phone Number:</label>
+            <input class="formInput" type="tel" id="phoneSignup"/>
+        </div>
+        <div class="formGroup">
+            <label for="adrSignup">address:</label>
+            <input id="autoAddress" placeholder="Enter your address" onFocus="geolocate()" type="text" class="formGroup">
+            <div id="address">
+                <div class="row">
+                <div class="col-md-6">
+                    <label class="controlGroup">Street address</label>
+                    <input class="formInput" id="street_number" disabled="true">
+                </div>
+                <div class="col-md-6">
+                    <label class="controlGroup">Route</label>
+                    <input class="formInput" id="route" disabled="true">
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-6">
+                    <label class="controlGroup">City</label>
+                    <input class="formInput" id="city" disabled="true">
+                </div>
+                <div class="col-md-6"> 
+                    <label class="controlGroup">State</label>
+                    <input class="formInput" id="state" disabled="true">
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-6">
+                    <label class="controlGroup">Zip code</label>
+                    <input class="formInput" id="postal_code" disabled="true">
+                </div>
+                <div class="col-md-6">
+                    <label class="controlGroup">Country</label>
+                    <input class="formInput" id="country" disabled="true">
+                </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="formGroup">
-        <label for="dobSignup">Date Of Birth:</label>
-        <input class="formInput" type="date" id="dobSignup"/>
-    </div>
-    <div class="formGroup">
-        <label for="phoneSignup">Phone Number:</label>
-        <input class="formInput" type="tel" id="phoneSignup"/>
-    </div>
-    <div class="formGroup">
-        <label for="passwordSignup">Choose Password:</label>
-        <input class="formInput" type="password" id="passwordSignup"/>
-    </div>
-    <div class="formGroup">
-        <label for="verifyPassword">Confirm Password:</label>
-        <input class="formInput" type="password" id="verifyPassword"/>
-    </div>
-    <div class="formGroup">
-        <label for="userType">Select User Type: </label>
-        <select id="userType" name="userChoice" form="userForm">
-            <option value="Buyer">Consumer</option>
-            <option value="Delivery">Delivery Driver</option>
-        </select>
-    </div>  
     <div class="formGroup">
         <button class="btn btn-primary" type="submit">Submit</button>
     </div>
