@@ -7,7 +7,7 @@ const signupForm = async (event) => {
     const type= document.querySelector('#userType').value;
     const email = document.querySelector('#emailSignup').value.trim();
     const password = document.querySelector('#passwordSignup').value.trim();
-    // const verifyPassword = document.querySelector('#verifyPassword').value.trim(); //we will use this to verify password
+    const verifyPassword = document.querySelector('#verifyPassword').value.trim(); //we will use this to verify password
     const name = document.querySelector('#nameSignup').value.trim();
     const birth = document.querySelector('#dobSignup').value.trim();
     const cell = document.querySelector('#phoneSignup').value.trim();
@@ -16,6 +16,7 @@ const signupForm = async (event) => {
     const state = document.querySelector('#state').value.trim();
     const zip = document.querySelector('#postal_code').value.trim();
     const country = document.querySelector('#country').value.trim();
+    
 
 //send user id to response
     if (type && email && password && name && birth && cell && street && city && state && zip && country){
@@ -41,15 +42,16 @@ const signupForm = async (event) => {
             }).then(response => {
 
                 if (response.ok) {
-                    // document.location.replace('/');
+                    document.location.replace('/profile');
                 } else {
                     alert('Failed to sign-up :(');
                 }
 
             })
         })
-    }
+    }  
 };
+
 
 document
     .querySelector('.signup-form')
