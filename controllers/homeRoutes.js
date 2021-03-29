@@ -28,6 +28,33 @@ router.get('/products', async (req, res) => {
 
 });
 
+// router.get('/products/:id', async (req, res) => {
+//     try {
+//         const productId = await Products.findByPk(req.params.id, {
+//             include: [
+//                 {
+//                     model: Products,
+//                     attributes: [
+//                         'id',
+//                         'name',
+//                         'thc',
+//                         'cbd',
+//                         'price',
+//                         'weight',
+//                     ],
+//                 },
+//             ],
+            
+//         });
+
+//         const prodId = productId.get({ plain: true });
+//         res.render('products', { prodId });
+//     } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
+
+// });
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     // if (req.session.logged_in) {
