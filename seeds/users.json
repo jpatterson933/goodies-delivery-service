@@ -7,6 +7,16 @@
         "birth": "09-03-1990",
         "cell": 5555555555,
         "address": "address 123 Los Angeles"
+    },
+    {
+        "type": "Consumer",
+        "email": "jen@jeff.com",
+        "password": "123456",
+        "name": "Jen",
+        "birth": "09-03-1991",
+        "cell": 5555555556,
+        "address": "address 123 Los Angles"
     }
+
 
 ]

@@ -369,20 +369,13 @@ body {
 
 .One {
     border-radius: 10px;
-    background: radial-gradient(circle, rgba(0,1,36,1) 0%, rgba(101,121,9,1) 0%, rgba(10,155,168,0.8141631652661064) 0%);
-    padding: 150px;
-    width: 40%;
-    margin-top: 70px;
-    color:white;
-}
+    width: 50%;
 
+}
 .Two {
-    padding: 150px;
-    background: radial-gradient(circle, rgba(0,1,36,1) 0%, rgba(101,121,9,1) 0%, rgba(117,10,168,0.9318102240896359) 0%);
     border-radius: 10px;
-    width: 40%;
-    margin-top: 70px;
-    color:white;
+    width: 50%;
+
 }
 
 button {
