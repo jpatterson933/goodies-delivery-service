@@ -1,4 +1,4 @@
-const loginForm = async (event) => {
+let loginForm = async (event) => {
     event.preventDefault();
 
     const email = document.querySelector('#emailLogin').value.trim();
@@ -17,6 +17,8 @@ const loginForm = async (event) => {
         }
     }
 };
+
+
 
 const logout = async () => {
     console.log("testing")

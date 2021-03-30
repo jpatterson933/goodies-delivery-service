@@ -1,8 +1,5 @@
 // ------------------this will be responsible for grabbing our json products and displaying them-------------//
 
-const { response } = require('express');
-const products = require('../../seeds/products.json')
-
 const showProducts = async (event) => {
     event.preventDefault();
     
