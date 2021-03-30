@@ -1,13 +1,9 @@
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script src="/js/login.js"></script>
-<script src="js/auto-complete.js"></script>
-
-
 <!--sign up form card-->
+
 <div class="signup-form"> 
     <form class="form">
         <div class="formGroup">
-                <label for="userType">Select User Type: </label>
+                <label for="userType">User: </label>
             <select id="userType" name="userChoice" form="userForm">
                 <option value="Buyer">Consumer</option>
                 <option value="Delivery">Delivery Driver</option>
@@ -39,75 +35,41 @@
         </div>
 
 
+    <div id="locationField">
+		<input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+	</div>
 
-    <form id="address-form" action="" method="get" autocomplete="off">
-        <label class="full-field">
-            <span class="form-label">User address:</span>
-                <input
-                    id="useraddress"
-                    name="useraddress"
-                    autocomplete="off"
-                />
-        </label>
+	<table id="address" class="w3-table-all">
+		<tr>
+			<td class="label">Street address</td>
+			<td class="slimField"><input class="field" id="street_number" disabled="true"></input>
+			</td>
+			<td class="wideField" colspan="2"><input class="field" id="route" disabled="true"></input>
+			</td>
+		</tr>
+		<tr>
+        <td class="label">City</td>
+			<td class="wideField" colspan="3"><input class="field" id="locality" disabled="true"></input>
+			</td>
+		</tr>
+		<tr>
+			<td class="label">State</td>
+			<td class="slimField"><input class="field" id="administrative_area_level_1" disabled="true"></input>
+			</td>
+			<td class="label">Zip code</td>
+			<td class="wideField"><input class="field" id="postal_code" disabled="true"></input>
+			</td>
+		</tr>
+		<tr>
+			<td class="label">Country</td>
+			<td class="wideField" colspan="3"><input class="field" id="country" disabled="true"></input>
+			</td>
+		</tr>
+	</table>
 
-        <label class="full-field">
-            <span class="form-label">Apartment, unit, suite, or floor #</span>
-            <input id="addrsNum" name="addrrsNum" />
-        </label>
-        <label class="full-field">
-            <span class="form-label">City</span>
-            <input id="city" name="city"/>
-        </label>
-        <label class="slim-field-left">
-            <span class="form-label">State</span>
-            <input id="state" name="state"/>
-        </label>
-        <label class="slim-field-right" for="postal_code">
-            <span class="form-label">Zip code</span>
-            <input id="zipcode" name="zipcode"/>
-        </label>
-     </form>
-
-
-        {{!-- <div class="formGroup">
-            <div id="address">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label class="controlGroup">Street address</label>
-                        <input class="formInput" id="street_number">
-                    </div>
-                </div>
-                <div class="row">
-                <div class="col-md-6">
-                    <label class="controlGroup">City</label>
-                    <input class="formInput" id="city">
-                </div>
-                <div class="col-md-6"> 
-                    <label class="controlGroup">State</label>
-                    <input class="formInput" id="state">
-                </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <label class="controlGroup">Zip code</label>
-                        <input class="formInput" id="postal_code">
-                    </div>
-                    <div class="col-md-6">
-                        <label class="controlGroup">Country</label>
-                        <input class="formInput" id="country">
-                    </div>
-                </div>
-            </div>
-        </div>
     <div class="formGroup">
-
         <button class="btn btn-primary" type="submit">Submit</button>
     </div>
     </form>
-</div> --}}
 </div>
 
-
-{{!-- <script src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&callback=initMap"
-  type="text/javascript"></script> --}}
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&libraries=places">
