@@ -1,3 +1,10 @@
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+
+
 body {
   font-family: Arial;
   margin: 0;
@@ -114,7 +121,16 @@ body {
 
 .w3-sidebar a {
     font-family: "Roboto", sans-serif
+    
 }
+
+.w3-sidebar {
+    background: rgb(23,149,16);
+background: linear-gradient(90deg, rgba(23,149,16,0.5858718487394958) 15%, rgba(12,106,53,0.9318102240896359) 100%, rgba(108,54,196,1) 100%);
+}
+
+
+
 body,h1,h2,h3,h4,h5,h6,.w3-wide {
     font-family: "Montserrat", sans-serif;
 }
@@ -234,4 +250,60 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
     border: 1px solid black;
 }
 
+.card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;    
+    background: wheat;
+  }
+
+  .card2 {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
   
+  .price {
+    color: white;
+    font-size: 22px;
+  }
+  
+  .card1 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card1 button:hover {
+    opacity: 0.7;
+  }
+  
+.prod-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.img-card {
+    border: 1px solid black;
+}
+
+.One {
+    border: 1px solid black;
+    border-radius: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    width: 50%;
+    background: rgb(108,54,196);
+    background: linear-gradient(90deg, rgba(108,54,196,0.3701855742296919) 13%, rgba(80,16,149,0.5858718487394958) 54%, rgba(73,2,106,0.43461134453781514) 92%);
+}
