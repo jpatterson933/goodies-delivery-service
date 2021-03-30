@@ -1,3 +1,44 @@
+
+
+  <!-- Image header -->
+  {{!-- <main class="w3-display-container w3-container"> --}}
+  <div class="slideshow-container">
+      {{!-- <main class="w3-display-container w3-container"></main> --}}
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides">
+                <img src="../../images/outdoor-weed-growing.jpg" alt="Jeans" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <img src="../../images/istockphoto-1151078965-612x612.jpg" alt="Jeans" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <img src="../../images/hq-cannabis-photo.jpg" alt="Jeans" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <img src="../../images/wd.webp" alt="Jeans" style="width:100%">
+              </div>
+      {{!-- </main> --}}
+  </div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+
+
+
+
 <section class = "One">
 
     
