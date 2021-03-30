@@ -3,21 +3,45 @@
 <title>GoodDeez</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{!-- w3 schoools style sheet --}}
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{{!-- google fonts (other fonts) style sheets --}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<style>
-.w3-sidebar a {font-family: "Roboto", sans-serif}
-body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-</style>
+<!--Our style sheet DO NOT DELETE-->
+<link rel="stylesheet" href="/css/style.css">
+
+{{!-- jquery script --}}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/js/verify-age.js"></script>
+
 <body class="w3-content" style="max-width:1200px">
+      {{!-- age verification --}}
+    {{!-- <div class="modal" tabindex="-1" role="dialog" id="alert-modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Wait a second...are you at least 21 years old?</h5>
+          </div>
+          <div class="modal-body">
+            <p>Please be completely honest with us as our business depends upon getting an A in the class!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="of-age" data-dismiss="modal">I am 21!</button>
+            <button type="button" class="btn btn-secondary" id="not-of-age" data-dismiss="modal">I am not 21!</button>
+          </div>
+        </div>
+      </div>
+    </div> --}}
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
@@ -26,17 +50,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide"><a href="/" id="home-link"><b>Welcome to GoodDeez!</b></a></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="#" class="w3-bar-item w3-button">Flower</a>
-    <a href="#" class="w3-bar-item w3-button">Edibles</a>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Products <i class="fa fa-caret-down"></i>
-    </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Sativa</a>
-      <a href="#" class="w3-bar-item w3-button">Indica</a>
-      <a href="#" class="w3-bar-item w3-button">Hybrid</a>
-      <a href="#" class="w3-bar-item w3-button">Straight</a>
-    </div>
+    <a href="/products" class="w3-bar-item w3-button">Products</a>
     <a href="/homepage" class="w3-bar-item w3-button">Home</a>
     <a href="/profile" class="w3-bar-item w3-button">Profile</a>
     <a href="/signup" class="w3-bar-item w3-button">Signup</a>
@@ -112,77 +126,18 @@ function showSlides() {
 
   {{!-- <main class="w3-display-container w3-container">
     <img src="../../images/outdoor-weed-growing.jpg" alt="Jeans" style="width:100%">
-
     <div class="w3-display-topleft" style="padding:24px 48px">
       <p><a href="/products" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
     </div>
 
-    
+  </main>
 
 
-    </main> --}}
 
 
   <!-- Product grid -->
 
   {{{body}}}
-  {{!-- <div class="w3-row w3-grayscale">
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="/w3images/jeans1.jpg" style="width:100%">
-        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="/w3images/jeans2.jpg" style="width:100%">
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="/w3images/jeans2.jpg" style="width:100%">
-          <span class="w3-tag w3-display-topleft">New</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
-        </div>
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="/w3images/jeans3.jpg" style="width:100%">
-        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="/w3images/jeans3.jpg" style="width:100%">
-        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <img src="/w3images/jeans4.jpg" style="width:100%">
-          <span class="w3-tag w3-display-topleft">Sale</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
-        </div>
-        <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="/w3images/jeans4.jpg" style="width:100%">
-        <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
-      </div>
-      <div class="w3-container">
-        <img src="/w3images/jeans1.jpg" style="width:100%">
-        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
-      </div>
-    </div>
-  </div> --}}
 
   <!-- Subscribe section -->
   <div class="w3-container w3-black w3-padding-32">
@@ -212,7 +167,6 @@ function showSlides() {
         <p><a href="#">About us</a></p>
         <p><a href="#">We're hiring</a></p>
         <p><a href="#">Support</a></p>
-        <p><a href="#">Find store</a></p>
         <p><a href="#">Shipment</a></p>
         <p><a href="#">Payment</a></p>
         <p><a href="#">Gift card</a></p>
@@ -222,9 +176,8 @@ function showSlides() {
 
       <div class="w3-col s4 w3-justify">
         <h4>Store</h4>
-        <p><i class="fa fa-fw fa-map-marker"></i> Company Name</p>
-        <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
-        <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
+        <p><i class="fa fa-fw fa-map-marker"></i>deezNUGS LLC</p>
+        <p><i class="fa fa-fw fa-envelope"></i> info@deeznugs.com</p>
         <h4>We accept</h4>
         <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
         <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
@@ -239,7 +192,7 @@ function showSlides() {
     </div>
   </footer>
 
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+  <div class="w3-black w3-center w3-padding-24">deezNUGS LLC</div>
 
   <!-- End page content -->
 </div>
@@ -284,8 +237,8 @@ function w3_close() {
 }
 </script>
 
-
-<script src="/js/verify-age.js"></script>
+    <script src='/js/cart.js'></script>
+    <script src="/js/verify-age.js"></script>
     <script src='/js/display-products.js'></script>
     <script src='/js/signup.js'></script>
     <script src='/js/verify-pw.js'></script>
