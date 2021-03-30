@@ -114,6 +114,9 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 })
 
+router.get('/aboutus', (req, res) => {
+    res.render('aboutus')
+})
 
 //this is our logout function that essentially destroys the dession
 router.post('/logout', (req, res) => {
