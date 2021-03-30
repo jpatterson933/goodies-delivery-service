@@ -1,24 +1,18 @@
 <section class = "One">
-    <div id="product-wrap">
-    <div>
-        <div class="container">
-<div id="product-wrap">
-    <div>
-        <div class="container">
-        <img src="{{image}}" alt="Avatar" class="image" style="width:100%">
-        <div class="middle">
-            <div class="text">
-                <h5 class="card-title">{{name}}</h5>
-                <p class="card-text">{{thc}} THC</p>
-                <p class="card-text">{{cbd}} CBD</p>
-                <p class="card-text">${{price}}</p>
-                <p class="card-text">Weight: {{weight}}</p>
-                <p class="card-text">Brand: {{brand}}</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
-            </div>
-        </div>  
-        </div>
-    </div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{image}}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{thc}} THC</li>
+                <li class="list-group-item">{{cbd}} CBD</li>
+                <li class="list-group-item">${{price}}</li>
+                <li class="list-group-item">Weight: {{weight}}</li>
+                <li class="list-group-item">Brand: {{brand}}</li>
+            </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Add to Cart</a>
+  </div>
 </div>
 
 <script src = "/js/login.js"></script>
