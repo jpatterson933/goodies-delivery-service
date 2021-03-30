@@ -25,26 +25,28 @@
 {{!-- jquery script --}}
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="/js/verify-age.js"></script>
+
 
 <body class="w3-content" style="max-width:1200px">
       {{!-- age verification --}}
-    {{!-- <div class="modal" tabindex="-1" role="dialog" id="alert-modal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Wait a second...are you at least 21 years old?</h5>
-          </div>
-          <div class="modal-body">
-            <p>Please be completely honest with us as our business depends upon getting an A in the class!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" id="of-age" data-dismiss="modal">I am 21!</button>
-            <button type="button" class="btn btn-secondary" id="not-of-age" data-dismiss="modal">I am not 21!</button>
+    <div class="overlay">
+      <div class="modal fade" tabindex="-1" role="dialog" id="alert-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Wait a second...are you at least 21 years old?</h5>
+            </div>
+            <div class="modal-body">
+              <p>Please be completely honest with us!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="of-age" data-dismiss="modal">I am 21!</button>
+              <button type="button" class="btn btn-secondary" id="not-of-age" data-dismiss="modal"><a href="https://www.gardeningknowhow.com/edible/vegetables/tomato/growing-tomatoes-guide.htm">I am not 21!</a></button>
+            </div>
           </div>
         </div>
       </div>
-    </div> --}}
+    </div>
 
 <!-- Sidebar/menu -->
 

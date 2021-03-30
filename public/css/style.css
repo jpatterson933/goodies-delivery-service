@@ -189,7 +189,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
 
   
   /* --------------------------------------------------------END NAV BAR ---------------------------------------------------------------------- */
-  
+
+
   /* --------------------------------------------------------BEG FOOTER ---------------------------------------------------------------------- */
   
   #footer-bg {
@@ -217,11 +218,18 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
 }
 /* --------------------------------------------------------END PRODUCT CARDS---------------------------------------------------------------- */
 /* --------------------------------------------------------AGE VERIFY---------------------------------------------------------------- */
-.modal {
+.overlay {
     z-index: 99;
-    max-width: 500px;
-    max-height: 200px;
+}
+
+.modal {
+    z-index: 999;
+    width: 72em;
+    height: 29em;
     background-color: white;
+    position: fixed;
+    margin: 1em 0em 0em 1em;
+    padding: 0em;
 }
 
 .modal-header {
@@ -230,11 +238,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
 }
 
 .modal-title {
-    background-color:  rgba(140, 149, 90, 1);
-    padding: .25em;
+    background-color: rgba(126, 213, 90, .5);
     border-radius: 15px;
     border: 1px solid black;
     box-shadow: 1px 1px 1px black;
+    padding: 1em;
+    font-size: 3em;
 }
 
 .modal-body {
@@ -242,11 +251,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
 }
 
 .modal-body p {
-    background-color: rgba(140, 199, 90, 1);
-    padding: 1em;
+    background-color: rgba(140, 199, 90, .8);
+    font-size: 2em;
+    padding: 0em;
     border-radius: 15px;
     border: 1px solid black;
-    font-weight: 700;
     text-align: center;
     color: black;
     box-shadow: 1px 1px 1px black;
@@ -272,8 +281,18 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
 
 .modal-footer {
     background-color: white;
-    border: 1px solid black;
+    margin-left: 20em;
+    padding: 0em;
 }
+#of-age {
+    padding: 0em;
+    font-size: 3em;
+}
+#not-of-age {
+    padding: 0em;
+    font-size: 3em;
+}
+/* --------------------------------------------------------END AGE VERIFY---------------------------------------------------------------- */
 
 .card1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
