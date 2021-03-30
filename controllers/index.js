@@ -12,7 +12,6 @@ const homeRoutes = require('./homeRoutes')
 //this grabs our login and our signup routes
 const login = require('./login')
 const signup = require('./signup')
-
 //this connects our homeroutes, apiroutes, login, and signup routes
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
