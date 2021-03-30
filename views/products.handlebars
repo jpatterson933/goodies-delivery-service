@@ -23,20 +23,12 @@
         
         {{#each product as |products|}}
         <div class="w3-row">
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="{{image}}" style="width:100%">
-        <p>{{name}}<br><b>${{price}}</b></p>
-        <button value={{id}} id="add-to-cart">Add to Cart</button>
-      </div>
-      
-      {{!-- <div class="w3-container">
-        <img src="/w3images/jeans2.jpg" style="width:100%">
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
-      </div> --}}
-    </div>
-
+          <div class="w3-col l3 s6">
+            <div class="w3-container" id="product-cards">
+              <img src="{{image}}" style="width:100%">
+              <p>{{name}}<br><b>${{price}}</b></p>
+              <button value={{id}} id="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
         {{/each}}
-
-
-</div>
+        </div>

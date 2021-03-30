@@ -23,8 +23,7 @@ router.get('/products', async (req, res) => {
     try {
         const productData = await Products.findAll();
         //we create a function and assign it to product
-        const product = productData.map((products) => 
-            products.get({ plain: true }));
+        const product = productData.map((products) => products.get({ plain: true }));
             //here we render our products and assign our product function to it -- this is when we use the {{}} mustaches inside the handlebars template
         res.render('products', { product });
     } catch (err) {
