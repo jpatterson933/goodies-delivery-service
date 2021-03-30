@@ -77,24 +77,35 @@ router.get('/profile', withAuth, async (req, res) => {
 
 });
 
-//this router is responsible for showing what appears on our homepage
+//this router is responsible for showing what appears on our homepage --its an async function
 router.get('/homepage', async (req, res) => {
     try {
+        //assigns Products in Product class to productData
         const productData = await Products.findAll();
-        const product = productData.map((products) => 
-            products.get({ plain: true }));
+        //the map creates a new array and calls the function for each element in that array
+        const product = productData.map((products) => products.get({ plain: true }));
+        //selects a random product from the array of products that we mapped
         const ranIndex = Math.floor(Math.random()*(product.length-1))
         console.log(ranIndex);
+        //here we render our homepage.handlebars and plug in the random product that we grabbed
         res.render('homepage',  product[ranIndex] );
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
-
 });
 
 router.get('/cart', (req, res) => {
     res.render('cart')
+})
+
+router.post('/cart', async (req, res) => {
+    try {
+        const cartData = await Cart.create(req.body);
+        res.status(200).json(cartData);
+    } catch (err) {
+        res.status(400).json(err);
+    }
 })
 
 
@@ -105,7 +116,7 @@ router.get('/signup', (req, res) => {
 })
 
 
-
+//this is our logout function that essentially destroys the dession
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
       // Remove the session variables
@@ -118,7 +129,5 @@ router.post('/logout', (req, res) => {
   });
 
 
-
-  
 
 module.exports = router;
