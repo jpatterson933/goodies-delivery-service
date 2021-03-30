@@ -1,4 +1,5 @@
 const sequelize = require('../config/connection');
+const { Cart } = require('../models');
 const Products = require('../models/products');
 const Users = require('../models/users')
 const productData = require('./products.json');
@@ -15,6 +16,11 @@ const seedDatabase = async () => {
   await Users.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
+  });
+
+  await Cart.create({
+    user_id: id,
+    products_id: id,
   });
 
   
