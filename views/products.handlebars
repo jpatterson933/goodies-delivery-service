@@ -21,14 +21,48 @@
 </div> --}}
 
         
-        {{#each product as |products|}}
-        <div class="w3-row">
+        
+        {{!-- <div class="w3-row">
           <div class="w3-col l3 s6">
             <div class="w3-container" id="product-cards">
-              <img src="{{image}}" style="width:100%">
-              <p>{{name}}<br><b>${{price}}</b></p>
+              <img src="" style="width:100%">
+              <p><br><b></b></p>
               <button value={{id}} id="add-to-cart">Add to Cart</button>
             </div>
           </div>
-        {{/each}}
-        </div>
+        
+        </div> --}}
+
+
+
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("../images/growing-marijuana.jpg");
+
+  /* Set a specific height */
+  min-height: 200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+<!-- Container element -->
+<div class="parallax">
+    <section class="prod-container">
+{{#each product as |products|}}
+<div class="card1" >
+  <img src="{{image}}" alt="{{name}}" style="width:100%">
+  <h1>{{name}}</h1>
+  <p class="price">${{price}}</p>
+  <p>{{thc}} THC</p>
+  <p>{{brand}}</p>
+  <p><button>Add to Cart</button></p>
+
+</div>{{/each}}
+</section>This is Text
+</div>
