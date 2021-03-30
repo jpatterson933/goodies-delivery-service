@@ -21,7 +21,7 @@ $.fn.serializeObject = function() {
 
 $(".prod-container").on("click", "button", function(event) { 
   event.preventDefault(); 
-  const id = req.body.id;
+  const id = $(this).data_id;
   console.log(id)
   
 
