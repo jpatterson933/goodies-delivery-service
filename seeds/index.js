@@ -18,10 +18,10 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await Cart.create({
-    user_id: id,
-    products_id: id,
-  });
+  // await Cart.create({
+  //   user_id: id,
+  //   products_id: id,
+  // });
 
   
 

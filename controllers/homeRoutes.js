@@ -94,14 +94,19 @@ router.get('/homepage', async (req, res) => {
     }
 });
 
-router.get('/cart', (req, res) => {
-    res.render('cart')
-})
+// router.get('/cart', (req, res) => {
+//     res.render('cart')
+// })
 
 router.post('/cart', async (req, res) => {
     try {
-        const cartData = await Cart.create( {products_id: req.body.id, users_id:req.sessions.user_id} );
+        console.log(req.body);
+        console.log('hello')
+        const id = parseInt(req.body.id)
+        const cartData = await Cart.create( {products_id: id, users_id:req.session.user_id} );
+
         res.status(200).json(cartData);
+    
     } catch (err) {
         res.status(400).json(err);
     }
@@ -128,6 +133,33 @@ router.post('/logout', (req, res) => {
     } else {
       res.status(404).end();
     }
+  });
+
+
+  router.get('/cart', async (req, res) => {
+      try {
+          const userData = await Users.findByPk(req.session.user_id, {
+              include: [{ 
+                  model: Products,
+                  through: Cart, 
+                  as: 'products'
+                }]
+            });
+            //you can looop through user.products and add the prices together, it will give us the total
+            //once you get that total, you can say products.total products: products.total
+            
+            console.log(userData)
+                if (!userData) {
+                    res.status(404).json({ message: 'No cart found with this id!' });
+                    return;
+                }
+            const user = userData.get({ plain: true });
+
+            res.render('cart', {products: user.products})
+                } catch (err) {
+                    res.status(500).json(err);
+                    console.log(err)
+                }
   });
 
 

@@ -10,9 +10,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="/js/auto-complete.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&libraries=places&callback=initAutocomplete" async defer></script>
@@ -24,26 +27,28 @@
 {{!-- jquery script --}}
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="/js/verify-age.js"></script>
+
 
 <body class="w3-content" style="max-width:1200px">
       {{!-- age verification --}}
-    {{!-- <div class="modal" tabindex="-1" role="dialog" id="alert-modal">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Wait a second...are you at least 21 years old?</h5>
-          </div>
-          <div class="modal-body">
-            <p>Please be completely honest with us as our business depends upon getting an A in the class!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" id="of-age" data-dismiss="modal">I am 21!</button>
-            <button type="button" class="btn btn-secondary" id="not-of-age" data-dismiss="modal">I am not 21!</button>
+    <div class="overlay">
+      <div class="modal fade" tabindex="-1" role="dialog" id="alert-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Wait a second...are you at least 21 years old?</h5>
+            </div>
+            <div class="modal-body">
+              <p>Please be completely honest with us!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="of-age" data-dismiss="modal">I am 21!</button>
+              <button type="button" class="btn btn-secondary" id="not-of-age" data-dismiss="modal"><a href="https://www.gardeningknowhow.com/edible/vegetables/tomato/growing-tomatoes-guide.htm">I am not 21!</a></button>
+            </div>
           </div>
         </div>
       </div>
-    </div> --}}
+    </div>
 
 <!-- Sidebar/menu -->
 
@@ -118,43 +123,6 @@
       <i class="fa fa-search"></i>
     </p>
   </header>
-
-  <!-- Image header -->
-  {{!-- <main class="w3-display-container w3-container"> --}}
-  <div class="slideshow-container">
-      {{!-- <main class="w3-display-container w3-container"></main> --}}
-              <!-- Full-width images with number and caption text -->
-              <div class="mySlides">
-                <img src="../../images/outdoor-weed-growing.jpg" alt="Jeans" style="width:100%">
-              </div>
-              <div class="mySlides">
-                <img src="../../images/istockphoto-1151078965-612x612.jpg" alt="Jeans" style="width:100%">
-              </div>
-              <div class="mySlides">
-                <img src="../../images/hq-cannabis-photo.jpg" alt="Jeans" style="width:100%">
-              </div>
-              <div class="mySlides">
-                <img src="../../images/wd.webp" alt="Jeans" style="width:100%">
-              </div>
-      {{!-- </main> --}}
-  </div>
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
-
 
 
 
@@ -271,7 +239,6 @@ function w3_close() {
 }
 </script>
 
-    <script src='/js/cart.js'></script>
     <script src="/js/verify-age.js"></script>
     <script src='/js/display-products.js'></script>
     <script src='/js/signup.js'></script>
@@ -281,4 +248,3 @@ function w3_close() {
 </body>
 </html>
 
-<div class="parallax" style="text-align: center; color: white">

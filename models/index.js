@@ -5,23 +5,25 @@ const Address = require('./address')
 
 //this says that any single product can belong to any number of popel
 Products.belongsToMany(Users, {
-    foreignKey:'products_id',
     through:{
         model: Cart,
         unique:false
     },
-    as: 'users_cart'
+    as: 'users_cart',
+    foreignKey:'products_id'
 });
 
 //this is says that any single user can have an associate with any number of products
 Users.belongsToMany(Products, {
-    foreignKey:'user_id',
     through:{
         model: Cart,
         unique:false
     },
-    as: 'products'
+    as: 'products',
+    foreignKey:'users_id'
 })
+
+
 
 
 module.exports = { 
