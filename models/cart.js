@@ -11,6 +11,7 @@ Cart.init(
         primaryKey: true,
         autoIncrement: true,
     },
+    //this is our foreign key that will attach to the products id in the product model
     products_id:{
         type: DataTypes.INTEGER,
         references: {
@@ -18,6 +19,7 @@ Cart.init(
             key: 'id',
         },
     },
+    //this is the foreign key that will attach to the users id in the users model
     users_id:{
         type: DataTypes.INTEGER,
         references: {
@@ -36,9 +38,3 @@ Cart.init(
 );
 
 module.exports = Cart
-
-
-
-// userid
-// productid
-

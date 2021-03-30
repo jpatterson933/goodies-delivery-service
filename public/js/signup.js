@@ -16,7 +16,6 @@ const signupForm = async (event) => {
     const state = document.querySelector('#state').value.trim();
     const zip = document.querySelector('#postal_code').value.trim();
     const country = document.querySelector('#country').value.trim();
-    
 
 //send user id to response
     if (type && email && password && name && birth && cell && street && city && state && zip && country){
@@ -50,6 +49,10 @@ const signupForm = async (event) => {
             })
         })
     }  
+
+    if (password !== verifyPassword) {
+        alert("Your passwords do not match!")
+    }
 };
 
 
