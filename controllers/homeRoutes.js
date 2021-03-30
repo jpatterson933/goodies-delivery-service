@@ -100,7 +100,7 @@ router.get('/cart', (req, res) => {
 
 router.post('/cart', async (req, res) => {
     try {
-        const cartData = await Cart.create(req.body);
+        const cartData = await Cart.create( {products_id: req.body.id, users_id:req.sessions.user_id} );
         res.status(200).json(cartData);
     } catch (err) {
         res.status(400).json(err);
