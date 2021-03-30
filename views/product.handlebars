@@ -10,9 +10,20 @@
                 <p class="card-text">${{price}}</p>
                 <p class="card-text">Weight: {{weight}}</p>
                 <p class="card-text">Brand: {{brand}}</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <form action="/cart/" method="post" class="BuyForm">
+                        <fieldset> 
+                            <input type="hidden" name="products[0395][product_id]" class="HiddenInput">
+                                <div class="FormItem FormSubmit">
+                                     <button type="submit" class="SubmitButton AddToCart"><span>Add to cart</span></button>
+                                </div>
+                        </fieldset>
+                    </form>
+                    </div>  
+                </div>
             </div>
-        </div>  
+        </div> 
         </div>
     </div>
 </div>
+
+

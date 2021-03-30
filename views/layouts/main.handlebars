@@ -11,6 +11,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
 <!--Our style sheet DO NOT DELETE-->
 <link rel="stylesheet" href="/css/style.css">
 
@@ -49,7 +54,7 @@
     <a href="/homepage" class="w3-bar-item w3-button">Home</a>
     <a href="/profile" class="w3-bar-item w3-button">Profile</a>
     <a href="/signup" class="w3-bar-item w3-button">Signup</a>
-    <button class="w3-bar-item w3-button" id="logout">Logout</button>
+    <a href="/logout" class="w3-bar-item w3-button">Logout</a>
   </div>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
@@ -75,18 +80,61 @@
   <header class="w3-container w3-xlarge">
     <p class="w3-left">GoodDeez Delivery Service</p>
     <p class="w3-right">
-      <a href="/cart" class="fa fa-shopping-cart w3-margin-right"></a>
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
       <i class="fa fa-search"></i>
     </p>
   </header>
 
   <!-- Image header -->
-  <main class="w3-display-container w3-container">
+  {{!-- <main class="w3-display-container w3-container"> --}}
+  <div class="slideshow-container">
+      {{!-- <main class="w3-display-container w3-container"></main> --}}
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides">
+                <img src="../../images/outdoor-weed-growing.jpg" alt="Jeans" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <img src="../../images/istockphoto-1151078965-612x612.jpg" alt="Jeans" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <img src="../../images/hq-cannabis-photo.jpg" alt="Jeans" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <img src="../../images/wd.webp" alt="Jeans" style="width:100%">
+              </div>
+      {{!-- </main> --}}
+  </div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+
+  {{!-- <main class="w3-display-container w3-container">
     <img src="../../images/outdoor-weed-growing.jpg" alt="Jeans" style="width:100%">
     <div class="w3-display-topleft" style="padding:24px 48px">
       <p><a href="/products" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
     </div>
+
   </main>
+
+
+
+
   <!-- Product grid -->
 
   {{{body}}}
@@ -190,6 +238,7 @@ function w3_close() {
 </script>
 
     <script src='/js/cart.js'></script>
+    <script src="/js/verify-age.js"></script>
     <script src='/js/display-products.js'></script>
     <script src='/js/signup.js'></script>
     <script src='/js/verify-pw.js'></script>
