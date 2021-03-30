@@ -1,11 +1,11 @@
-//------------------------USED FOR GRABBING PRODUCTS --- NO ASSOCIATED ROUTES YET--------------------//
+//------------------------USED FOR GRABBING PRODUCTS --- will also grab our products below--------------------//
 const router = require('express').Router();
 
 const axios = require('axios').default;
+//grab our Products model
 const { Products } = require('../../models');
 
-
-
+//this route will grab all of our products and assign them to productsData
 router.get('/', async (req, res) => {
   const productsData = await Products.findAll()
   res.json(productsData) 
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 
 
-
+/*-------------------------------------THIS IS AXIOS AND IS RESONSIBLE FOR GRABBING NEW PRODUCTS TO ADD TO OUR SEEDS FILE-------------------- */
 // axios.get('https://api.github.com/orgs/axios')
 //   .then(response => {
 //     console.log(response.data);
