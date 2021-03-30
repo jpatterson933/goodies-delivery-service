@@ -5,6 +5,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: flex-start;
+  
 }
 
 .conifirmation {
@@ -60,6 +61,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
+    
   }
   
   .conifirmation {
@@ -111,6 +113,7 @@ body {
   /* --------------------------------------------------------BEG NAV BAR ---------------------------------------------------------------------- */
   #main-title {
       text-align: center;
+      
   }
   
   #main-nav {
@@ -131,6 +134,8 @@ body {
       text-shadow: 1px 1px 1px rgb(150 255 100), 1px 1px 1px black;
   
   }
+
+  
   /* --------------------------------------------------------END NAV BAR ---------------------------------------------------------------------- */
   
   /* --------------------------------------------------------BEG FOOTER ---------------------------------------------------------------------- */
