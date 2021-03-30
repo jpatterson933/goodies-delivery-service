@@ -5,13 +5,10 @@
             <div class="col-md-4 mb-3">
               <div class="card">
                 <div class="card-body">
-                  <div class="d-flex flex-column align-items-center text-center">
-                      <!--profile pic goes here-->
-                    <img src="https://avatarbox.net/avatars/img29/stoned_sponge_bob_avatar_picture_39431.jpg" alt="Admin" class="rounded-circle" width="150">
+                  <div class="d-flex flex-column align-items-center text-center">                    
                     <div class="mt-3">
                         <!--name goes here -->
-                      <h4>{{name}}</h4>
-                      <button> Edit Profile Settings </button>
+                      <h4>{{name}}'s Profile</h4>
                     </div>
                   </div>
                 </div>
@@ -22,9 +19,6 @@
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Full Name</h6>
-                    </div>
                     <div class="col-sm-9 text-secondary">
                       {{name}}
                     </div>
@@ -54,7 +48,8 @@
                       <h6 class="mb-0">Address</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{address}}
+                      <p>{{street}}</p>
+                      {{city}} {{state}} {{zip}}
                     </div>
                   </div>
                 </div>
