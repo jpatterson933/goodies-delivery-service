@@ -19,35 +19,37 @@ $.fn.serializeObject = function() {
 };
 //what values go where??
 
-$(".BuyForm .AddToCart").on("click", function(event) { 
+$(".prod-container").on("click", "button", function(event) { 
   event.preventDefault(); 
-    event.preventDefault();
-  event.preventDefault(); 
-  var $form = $(this).closest(".BuyForm"); 
-   $.ajax({ 
-           type: "POST", 
-           url: "/cart", 
-           data: $form.serializeObject(),
-   })
+  const id = req.body.id;
+  console.log(id)
+  
+
+  // var $form = $(this).closest(".BuyForm"); 
+  //  $.ajax({ 
+  //          type: "POST", 
+  //          url: "/cart", 
+  //          data: $form.serializeObject(),
+  //  })
 });
 
 
-  // Example POST method implementation:
-async function postData(data = {}) {
-    // Default options are marked with *
-    const response = await fetch(data, {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      body: JSON.stringify(data), // body data type must match "Content-Type" header
-      headers: {
-        'Content-Type': 'application/json'
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    });
-    return response.json(); // parses JSON response into native JavaScript objects
-  }
-  postData('', { answer: 42 })
-    .then(data => {
-      console.log(data); // JSON data parsed by `data.json()` call
-    });
+//   // Example POST method implementation:
+// async function postData(data = {}) {
+//     // Default options are marked with *
+//     const response = await fetch(data, {
+//       method: 'POST', // *GET, POST, PUT, DELETE, etc.
+//       body: JSON.stringify(data), // body data type must match "Content-Type" header
+//       headers: {
+//         'Content-Type': 'application/json'
+//         // 'Content-Type': 'application/x-www-form-urlencoded',
+//       },
+//     });
+//     return response.json(); // parses JSON response into native JavaScript objects
+//   }
+//   postData('', { answer: 42 })
+//     .then(data => {
+//       console.log(data); // JSON data parsed by `data.json()` call
+//     });
 
   
