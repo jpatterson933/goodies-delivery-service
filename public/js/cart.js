@@ -2,35 +2,36 @@
 
 
 //converts the form to a format that can be processed (ref product.handlbars)
-$.fn.serializeObject = function() {
-  var o = {};
-  var a = this.serializeArray();
-  $.each(a, function() {
-    if (o[this.name]) {
-      if (!o[this.name].push) {
-        o[this.name] = [o[this.name]];
-      }
-      o[this.name].push(this.value || '');
-    } else {
-      o[this.name] = this.value || '';
-    }
-  });
-  return o;
-};
+// $.fn.serializeObject = function() {
+//   var o = {};
+//   var a = this.serializeArray();
+//   $.each(a, function() {
+//     if (o[this.name]) {
+//       if (!o[this.name].push) {
+//         o[this.name] = [o[this.name]];
+//       }
+//       o[this.name].push(this.value || '');
+//     } else {
+//       o[this.name] = this.value || '';
+//     }
+//   });
+//   return o;
+// };
 //what values go where??
 
 $(".prod-container").on("click", "button", function(event) { 
   event.preventDefault(); 
-  const id = $(this).data_id;
+  const id = $(this).data("id");
   console.log(id)
-  
 
-  // var $form = $(this).closest(".BuyForm"); 
-  //  $.ajax({ 
-  //          type: "POST", 
-  //          url: "/cart", 
-  //          data: $form.serializeObject(),
-  //  })
+   $.ajax({ 
+           method: "POST", 
+           url: "/cart", 
+           data: {id: id},
+   }).then(function(response) {
+     console.log(response)
+
+   })
 });
 
 
