@@ -57,3 +57,9 @@ function geolocate() {
     });
   }
 }
+
+let autocomplete;
+let useraddress;
+let addrsNum;
+let zipcode;
+

@@ -21,16 +21,8 @@ $.fn.serializeObject = function() {
 
 $(".prod-container").on("click", "button", function(event) { 
   event.preventDefault(); 
-  const id = $(this).data_id;
-  console.log(id)
-  
-
-  // var $form = $(this).closest(".BuyForm"); 
-  //  $.ajax({ 
-  //          type: "POST", 
-  //          url: "/cart", 
-  //          data: $form.serializeObject(),
-  //  })
+  const id = $('this').data_id;
+  console.log(id);
 });
 
 
