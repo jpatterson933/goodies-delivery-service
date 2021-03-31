@@ -50,6 +50,9 @@
     <div class="card shop-items">
         <div class="img-container">
             <img src="{{image}}" alt="{{name}}" class="image" style="width:100%">
+              <div class="middle">
+    <h3 class="img-text">Made by:  {{brand}}</h3>
+  </div>
         </div>
     <div class = "card-text shop-item">
         <h1><span class="shop-item-title">{{name}}</span></h1>
@@ -60,8 +63,7 @@
 
         <p class="price shop-item-price">${{price}}</p>
         {{!-- product.id? --}}
-        <button data-id="{{id}}" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-        {{!-- <p><button data-id="{{product.id}}" class="shop-item-button" type="button">Plus one</a></button></p> --}}
+        <button data-id="{{id}}" class="btn btn-primary shop-item-button" type="button">ADD TO WISHLIST</button>
         </div>
     </div>
     </div>
