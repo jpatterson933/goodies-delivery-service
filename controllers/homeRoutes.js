@@ -94,9 +94,9 @@ router.get('/homepage', async (req, res) => {
     }
 });
 
-// router.get('/cart', (req, res) => {
-//     res.render('cart')
-// })
+router.get('/contact', (req, res) => {
+    res.render('contact')
+})
 
 router.post('/cart', async (req, res) => {
     try {
