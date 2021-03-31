@@ -532,6 +532,18 @@ button:hover {
     color: grey;
   }
 
+  .home-main {
+    border: 3px solid black;
+    width: 66%;
+    border-radius: 139px;
+    margin: 158px;
+    overflow: hidden;
+    background: rgb(251,251,251);
+    background: linear-gradient(90deg, rgba(251,251,251,0.6558998599439776) 0%, rgba(145,16,101,0.7707457983193278) 0%);
+  }
+
+
+
 
   @media only screen and (max-device-width: 1366px) {
     .parallax {
