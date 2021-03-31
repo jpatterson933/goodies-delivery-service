@@ -428,3 +428,16 @@ button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     color: green;
 }
+
+.about-text {
+    background-color: white;
+    font-weight: 900;
+    color: black;
+    text-shadow: 1px 1px 1px green;
+}
+
+#main-title {
+    font-size: 1em;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px grey, 1px 3px 1px green;
+}
