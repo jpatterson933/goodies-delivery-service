@@ -410,3 +410,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
     background: rgb(108,54,196);
     background: linear-gradient(90deg, rgba(108,54,196,0.3701855742296919) 13%, rgba(80,16,149,0.5858718487394958) 54%, rgba(73,2,106,0.43461134453781514) 92%);
 }
+
+#contact-thanks {
+    background: white;
+    color: black;
+}
