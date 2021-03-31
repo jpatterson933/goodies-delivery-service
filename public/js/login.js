@@ -32,6 +32,7 @@ const logout = async () => {
       document.location.replace('/login');
     } else {
       alert(response.statusText + "Please Login to Logout");
+      document.location.replace('/login')
     }
   };
 
