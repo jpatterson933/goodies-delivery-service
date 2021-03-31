@@ -7,8 +7,6 @@ if (process.env.JAWSDB_URL) {
     process.env.JAWSDB_URL
   )
 } else {
-
-
   const sequelize = new Sequelize(
     //name of the database
     process.env.DB_NAME,
