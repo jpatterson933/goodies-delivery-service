@@ -1,13 +1,14 @@
 //Here we require sequelize
 const Sequelize = require('sequelize');
+let sequelize;
 //we require dotenv so we can store our name, user and password in a separate file
 require('dotenv').config();
 if (process.env.JAWSDB_URL) {
-  const sequelize = new Sequelize(
+  sequelize = new Sequelize(
     process.env.JAWSDB_URL
   )
 } else {
-  const sequelize = new Sequelize(
+  sequelize = new Sequelize(
     //name of the database
     process.env.DB_NAME,
     //name of the user
