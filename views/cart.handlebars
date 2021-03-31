@@ -1,27 +1,5 @@
-{{!-- {{#each products as |product|}}
-<div class="card1" >
-  <h1>{{product.price}}</h1>
-  <h1>{{product.name}}</h1>
-  <p class="price">${{product.price}}</p>
-  <p>{{product.thc}} THC</p>
-  <p>{{product.brand}}</p>
-  <p><button data-id="{{id}}">Order Delivery Now</a></button></p>
 
-
-</div>{{/each}} --}}
-
-
-
-
-
-
-{{!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
-<div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-12">--}}
-
-
-{{!-- <div class="parallax"> --}}
+<div class="parallax">
 <section class="prod-container container content-section">
 {{#each products as |product|}}
     <div class="card shop-items">
@@ -44,46 +22,12 @@
     </div>
 {{/each}}
 </section>
-
-
-<section class="container content-section">
-            <div class="cart-row">
-                <span class="cart-item cart-header cart-column">ITEM</span>
-                <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-            </div>
-            <div class="cart-items">
-            </div>
-            <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">$0</span>
-            </div>
-            <a href="/checkout"><button class="btn btn-primary btn-purchase" type="button">PURCHASE</button></a>
-
-
-
-</section>
-
-{{!-- {{#each products as |product|}} --}}
-
-        {{!-- <section class="container content-section"> --}}
-            {{!-- <div class="shop-items"> --}}
-                {{!-- <div class="shop-item"> --}}
-                    {{!-- <span class="shop-item-title">{{product.name}}</span> --}}
-                    {{!-- <img class="shop-item-image" src=""> --}}
-                    {{!-- <div class="shop-item-details"> --}}
-                        {{!-- <span class="shop-item-price">${{product.price}}</span> --}}
-                        {{!-- <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button> --}}
-                    {{!-- </div>
-                </div>
-            </div>
-        </section>
-        {{/each}}
-<section class="container content-section">
-            <div class="cart-row">
-                <span class="cart-item cart-header cart-column">ITEM</span>
-                <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+<section class="container cart-table content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row" style="float: right;">
+                <span class="cart-item cart-header cart-column"></span>
+                <span class="cart-price cart-header cart-column"></span>
+                <span class="cart-quantity cart-header cart-column"></span>
             </div>
             <div class="cart-items">
             </div>
@@ -92,9 +36,10 @@
                 <span class="cart-total-price">$0</span>
             </div>
             <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-        </section> --}}
+</section>
 
-{{!-- </div>  --}}
+
+
 
 
 

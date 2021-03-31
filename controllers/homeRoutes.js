@@ -10,14 +10,6 @@ router.get('/', async (req, res) => {
     res.render('twentyone')
 })
 
-// router.get('/login', async (req, res) => {
-//     res.render('login')
-// })
-
-// router.get('/products', async (req, res) => {
-//     res.render('products')
-// })
-
 //this route gets all of our products from 
 router.get('/products', async (req, res) => {
     try {
@@ -206,6 +198,7 @@ router.post('/checkout', async (req, res) => {
         res.status(400).json(err);
     }
 })
+
 
 
 module.exports = router;
