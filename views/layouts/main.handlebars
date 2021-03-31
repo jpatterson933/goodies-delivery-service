@@ -17,6 +17,8 @@
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/js/auto-complete.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyCOA80ghIgx9XunoqHP_zz3c7D2ZeksG74&libraries=places&callback=initAutocomplete" async defer></script>
 
 
 <!--Our style sheet DO NOT DELETE-->
@@ -62,7 +64,7 @@
     <a href="/signup" class="w3-bar-item w3-button">Signup</a>
 
 
-    <a href="/logout" class="w3-bar-item w3-button">Logout</a>
+    <a href="/logout" id="logout" class="w3-bar-item w3-button">Logout</a>
     <br>
     <br>
     <br>
@@ -117,8 +119,8 @@
   <header class="w3-container w3-xlarge">
     <p class="w3-left">GoodDeez Delivery Service</p>
     <p class="w3-right">
-      <a href = "/cart"><i class="fa fa-shopping-cart w3-margin-right" style="color:white"></a></i>
-  
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
     </p>
   </header>
 
@@ -168,7 +170,10 @@
         <p><a href="#">We're hiring</a></p>
         <p><a href="#">Support</a></p>
         <p><a href="#">Shipment</a></p>
-
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Gift card</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
       </div>
 
       <div class="w3-col s4 w3-justify">

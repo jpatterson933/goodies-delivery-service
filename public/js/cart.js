@@ -21,6 +21,7 @@
 
 $(".prod-container").on("click", "button", function(event) { 
   event.preventDefault(); 
+
   const id = $(this).data("id");
   console.log(id)
 
