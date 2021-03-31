@@ -22,19 +22,79 @@
 
 
 {{!-- <div class="parallax"> --}}
-    <section class="prod-container">
+<section class="prod-container container content-section">
 {{#each products as |product|}}
-<div class="card">
-  <div class="img-container">
-  <img src="{{product.image}}" alt="{{product.name}}" class="image" style="width:100%">
-  </div>
-  <div class = "card-text">
-  <h1>{{product.name}}</h1>
-  <p>{{product.thc}} THC</p>
-  <p class="price">${{product.price}}</p>
-  {{!-- product.id? --}}
-  <p><button data-id="{{product.id}}">Plus one</a></button></p>
-  </div>
-</div>{{/each}}
+    <div class="card shop-items">
+        <div class="img-container">
+            <img src="{{product.image}}" alt="{{product.name}}" class="image" style="width:100%">
+        </div>
+    <div class = "card-text shop-item">
+        <h1><span class="shop-item-title">{{product.name}}</span></h1>
+
+        <p>{{product.thc}} THC</p>             
+    
+       <div class="shop-item-details">
+
+        <p class="price shop-item-price">${{product.price}}</p>
+        {{!-- product.id? --}}
+        <button data-id="{{product.id}}" class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+        {{!-- <p><button data-id="{{product.id}}" class="shop-item-button" type="button">Plus one</a></button></p> --}}
+        </div>
+    </div>
+    </div>
+{{/each}}
 </section>
+
+
+<section class="container content-section">
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <a href="/checkout"><button class="btn btn-primary btn-purchase" type="button">PURCHASE</button></a>
+
+
+
+</section>
+
+{{!-- {{#each products as |product|}} --}}
+
+        {{!-- <section class="container content-section"> --}}
+            {{!-- <div class="shop-items"> --}}
+                {{!-- <div class="shop-item"> --}}
+                    {{!-- <span class="shop-item-title">{{product.name}}</span> --}}
+                    {{!-- <img class="shop-item-image" src=""> --}}
+                    {{!-- <div class="shop-item-details"> --}}
+                        {{!-- <span class="shop-item-price">${{product.price}}</span> --}}
+                        {{!-- <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button> --}}
+                    {{!-- </div>
+                </div>
+            </div>
+        </section>
+        {{/each}}
+<section class="container content-section">
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section> --}}
+
 {{!-- </div>  --}}
+
+
+

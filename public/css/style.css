@@ -465,10 +465,11 @@ button:hover {
   }
   
   .checkout-container {
-    background-color: #f2f2f2;
-    padding: 5px 20px 15px 20px;
+    background: rgb(251,251,251);
+    background: linear-gradient(90deg, rgba(251,251,251,0.6558998599439776) 100%, rgba(73,2,106,0.7847514005602241) 100%);    padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;
+    color: black;
   }
   
   input[type=text] {
