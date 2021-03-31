@@ -190,6 +190,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
   
   }
 
+ 
   
   /* --------------------------------------------------------END NAV BAR ---------------------------------------------------------------------- */
 
@@ -430,10 +431,12 @@ button:hover {
 }
 
 .about-text {
-    background-color: white;
+    background: rgb(251,251,251);
+    background: linear-gradient(90deg, rgba(251,251,251,0.6558998599439776) 100%, rgba(73,2,106,0.7847514005602241) 100%);
     font-weight: 900;
     color: black;
     text-shadow: 1px 1px 1px green;
+    margin-bottom: 3em;
 }
 
 #main-title {
