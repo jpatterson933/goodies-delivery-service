@@ -1,38 +1,3 @@
-{{!-- 
-<div id="product-wrap">
-    {{#each product as |products|}}
-    <div>
-        <div class="container">
-        <img src="{{image}}" alt="Avatar" class="image" style="width:100%">
-        <div class="middle">
-            <div class="text">
-                <h5 class="card-title">{{name}}</h5>
-                <p class="card-text">{{thc}} THC</p>
-                <p class="card-text">{{cbd}} CBD</p>
-                <p class="card-text">${{price}}</p>
-                <p class="card-text">Weight: {{weight}}</p>
-                <p class="card-text">Brand: {{brand}}</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
-            </div>
-        </div>  
-        </div>
-    </div>
-    {{/each}}
-</div> --}}
-
-        
-        
-        {{!-- <div class="w3-row">
-          <div class="w3-col l3 s6">
-            <div class="w3-container" id="product-cards">
-              <img src="" style="width:100%">
-              <p><br><b></b></p>
-              <button value={{id}} id="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-        
-        </div> --}}
-
 
 
 <style>
@@ -51,20 +16,27 @@
 }
 </style>
 
+
+
 <!-- Container element -->
 <div class="parallax">
     <section class="prod-container">
 {{#each product as |products|}}
-<div class="card1" >
-  <img src="{{image}}" alt="{{name}}" style="width:100%">
+<div class="card">
+  <div class="img-container">
+  <img src="{{image}}" alt="{{name}}" class="image" style="width:100%">
+  <div class="middle">
+    <h3 class="img-text">{{brand}}</h3>
+  </div>
+  </div>
+  <div class = "card-text">
   <h1>{{name}}</h1>
-  <p class="price">${{price}}</p>
   <p>{{thc}} THC</p>
-  <p>{{brand}}</p>
+  <p class="price">${{price}}</p>
   <p><button data-id="{{id}}">Add to Cart</a></button></p>
-
+  </div>
 </div>{{/each}}
 </section>
-</div>
+</div> 
 
 <script src="js/cart.js"></script>
