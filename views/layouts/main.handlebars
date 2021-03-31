@@ -58,11 +58,12 @@
     <h3 class="w3-wide"><a href="/" id="home-link"><b>Welcome to GoodDeez!</b></a></h3>
   </div>
   <div class="w3-large w3-text-grey" style="font-weight:bold">
-    {{#if loggedIn}}
+ 
     <a href="/homepage" class="w3-bar-item w3-button">Home</a>
     <a href="/products" class="w3-bar-item w3-button">Products</a>
     <a href="/viewnugs" class="w3-bar-item w3-button">deezNUGS</a>
-    {{/if}}
+    <a href="/wishlist" class="w3-bar-item w3-button">Wishlist</a>
+    
     <br>
     {{#if loggedIn}}
     <a href="/profile" class="w3-bar-item w3-button">Profile</a>
@@ -94,37 +95,27 @@
 
 <div class="parallax" style="text-align: center; color: white">
 
-
-<!-- Top menu on small screens -->
-<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">GoodDeez</div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-</header>
-
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:250px">
 
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
-  
-  <!-- Top header -->
+<!-- Push down content on small screens -->
+<div class="w3-hide-large" style="margin-top:83px"></div>
+
+<!-- Top header -->
 
 
 <header class="w3-container w3-xlarge">
   <p id="main-title" class="row-6">GoodDeez Delivery Service</p>
-  {{#if loggedIn}}
-  <a href= "/cart"><i class="fa fa-shopping-cart w3-margin-right" style="color:white"></a></i>
-  {{/if}}
+  {{!-- {{#if loggedIn}} --}}
+  <a href= "/wishlist"><i class="fa fa-shopping-cart w3-margin-right" style="color:white"></a></i>
+  {{!-- {{/if}} --}}
 </header>
 
-
   <!-- Product grid -->
-
   {{{body}}}
-
   
   <!-- Footer -->
   <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
@@ -165,7 +156,6 @@
   </footer>
 
   <div class="w3-black w3-center w3-padding-24">deezNUGS LLC</div>
-
   <!-- End page content -->
 </div>
 
@@ -209,12 +199,12 @@ function w3_close() {
 }
 </script>
     <script src="/js/slideshow.js"></script>
-    <script src="/js/verify-age.js"></script>
     <script src='/js/display-products.js'></script>
     <script src='/js/signup.js'></script>
     <script src='/js/verify-pw.js'></script>
     <script src='/js/login.js'></script>
     <script src = "/js/checkout.js"></script>
+    <script src="/js/verify-age.js"></script>
 </body>
 </html>
 

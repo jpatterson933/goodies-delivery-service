@@ -15,34 +15,34 @@ router.get('/', async (req, res) => {
 
 
 /*-------------------------------------THIS IS AXIOS AND IS RESONSIBLE FOR GRABBING NEW PRODUCTS TO ADD TO OUR SEEDS FILE-------------------- */
-// axios.get('https://api.github.com/orgs/axios')
-//   .then(response => {
-//     console.log(response.data);
-//   }, error => {
-//     console.log(error);
-//   });
+axios.get('https://api.github.com/orgs/axios')
+  .then(response => {
+    console.log(response.data);
+  }, error => {
+    console.log(error);
+  });
 
 //an object 
-// const options = {
-//     method: 'GET',
-//     url: 'https://neobi.p.rapidapi.com/api/products',
-//     params: {rev: 'v1.9', count: '6', htmlDescription: '0', page: '1'},
-//     headers: {
-//       'x-rapidapi-key': '3ae9d6acaemshb175628a0959ccfp18deb7jsn8c86242e0312',
-//       'x-rapidapi-host': 'neobi.p.rapidapi.com'
-//     }
-//   };
+const options = {
+    method: 'GET',
+    url: 'https://neobi.p.rapidapi.com/api/products',
+    params: {rev: 'v1.9', count: '6', htmlDescription: '0', page: '1'},
+    headers: {
+      'x-rapidapi-key': '3ae9d6acaemshb175628a0959ccfp18deb7jsn8c86242e0312',
+      'x-rapidapi-host': 'neobi.p.rapidapi.com'
+    }
+  };
   
-//   axios.request(options).then(function (response) {
+  axios.request(options).then(function (response) {
 
-//         for (let i = 0; i < response.data.length; i++) {       
+        for (let i = 0; i < response.data.length; i++) {       
        
-//       }
-//       // console.log(response.data)
+      }
+      // console.log(response.data)
     
-//     //   console.log(response.data);
-//   }).catch(function (error) {
-//       console.error(error);
-//   });
+    //   console.log(response.data);
+  }).catch(function (error) {
+      console.error(error);
+  });
 
   module.exports = router

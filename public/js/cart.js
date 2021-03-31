@@ -27,7 +27,7 @@ $(".prod-container").on("click", "button", function(event) {
 
    $.ajax({ 
            method: "POST", 
-           url: "/cart", 
+           url: "/wishlist", 
            data: {id: id},
    }).then(function(response) {
      console.log(response)
