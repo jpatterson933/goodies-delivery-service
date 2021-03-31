@@ -2,37 +2,33 @@
 
 <div class="signup-form"> 
     <form class="form">
-        <div class="formGroup">
-            <label for="emailSignup">Email:</label>
-            <input class="formInput" type="text" id="emailSignup"/>
-        </div>
-        <div class="formGroup">
-            <label for="passwordSignup">Choose Password:</label>
-            <input class="formInput" type="password" id="passwordSignup"/>
-        </div>
-        <div class="formGroup">
-            <label for="verifyPassword">Confirm Password:</label>
-            <input class="formInput" type="password" id="verifyPassword"/>
-        </div>
-        <div class="formGroup">
-            <label for="nameSignup">Name:</label>
-            <input class="formInput" type="text" id="nameSignup"/>
-        </div>  
-        <div class="formGroup">
-            <label for="dobSignup">Date Of Birth:</label>
-            <input class="formInput" type="date" id="dobSignup"/>
-        </div>
-        <div class="formGroup">
-            <label for="phoneSignup">Phone Number:</label>
-            <input class="formInput" type="tel" id="phoneSignup"/>
-        </div>
+        <table id="address" class="form">
+            
+            <label for="emailSignup"></label>
+            <input class="formInput" type="text" id="emailSignup" placeholder="Email"/>
+            
+            <label for="passwordSignup"></label>
+            <input class="formInput" type="password" id="passwordSignup" placeholder="Password"/>
+      
+            <label for="verifyPassword"></label>
+            <input class="formInput" type="password" id="verifyPassword" placeholder="Verify Password"/>
+     
+            <label for="nameSignup"></label>
+            <input class="formInput" type="text" id="nameSignup" placeholder="Enter Name"/>
+        
+            <label for="doobieSignup"></label>
+            <input class="formInput" type="date" id="doobieSignup" placeholder="Enter Date of Birth"/>
+       
+            <label for="phoneSignup"></label>
+            <input class="formInput" type="tel" id="phoneSignup" placeholder="Enter Phone Number"/>
+        </table>
 
-
+    {{!-- this is where the autofill api is --}}
     <div id="locationField">
-		<input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+		<input id="autocomplete" placeholder="Address" onFocus="geolocate()" type="text"></input>
 	</div>
 
-	<table id="address" class="w3-table-all">
+	<table id="address" class="form">
 		<tr>
 			<td class="label">Street address</td>
 			<td class="slimField"><input class="field" id="street_number" disabled="true"></input>
