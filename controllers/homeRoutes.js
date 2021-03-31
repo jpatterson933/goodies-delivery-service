@@ -4,12 +4,6 @@ const { Products, Users, Cart, Address } = require('../models')
 //here we require our withAuth that we will use to verify login credentials
 const withAuth = require('../utils/auth')
 
-//this router grabs our homepage - once the page loads it will end with a / and render the twentyone bootstraps handle
-router.get('/', async (req, res) => {
-    // res.render('homepage')
-    res.render('twentyone')
-})
-
 //this route gets all of our products from 
 router.get('/products', async (req, res) => {
     try {
