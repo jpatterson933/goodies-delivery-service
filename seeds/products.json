@@ -73,21 +73,24 @@
       "name": "No. 407 Sapphire Daze",
       "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/02300362/02300362_1.jpg?h=625&w=770&vr=20210321060207&hash=98192F25AF6D31AE596DB23EBE64B8754B2B2816", 
       "thc": "160-225 mg/g",
-      "price":"$5.99",
-      "brand":"Haven St"
+      "price":5.99,
+      "brand":"Haven St",
+      "producer": "Haven St"
     },
     {
       "name": "CBD Raspberry Milk Chocolate 1:20",
       "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/04201719/04201719_1.jpg?h=625&w=770&vr=20201103190129&hash=DC22EBE4E92D5951E1F53CE2D5305ADDD49C474F",
       "thc": "1 mg",
-      "price": "$4.49",
-      "brand": "Legend"
+      "price": 4.49,
+      "brand": "Legend",
+      "producer": "Legend"
     },
     {
       "name": "THC Candy Cane Crush Milk Chocolate",
       "image": "https://cdn.albertacannabis.org/-/media/images/cannabis/04201720/04201720_1.jpg?h=625&w=770&vr=20201103190131&hash=86D88B14312DFEA216F157E0588A858B271ACE41",
       "thc": "10 mg",
-      "price": "$4.49",
-      "brand": "Legend"
+      "price": 4.49,
+      "brand": "Legend",
+      "producer": "Legend"
     }
 ]

@@ -2,7 +2,6 @@
 const signupForm = async (event) => {
     event.preventDefault();
 
-    const type= document.querySelector('#userType').value;
     const email = document.querySelector('#emailSignup').value.trim();
     const password = document.querySelector('#passwordSignup').value.trim();
     const verifyPassword = document.querySelector('#verifyPassword').value.trim(); //we will use this to verify password
@@ -10,8 +9,8 @@ const signupForm = async (event) => {
     const birth = document.querySelector('#dobSignup').value.trim();
     const cell = document.querySelector('#phoneSignup').value.trim();
     const street = document.querySelector('#street_number').value.trim();
-    const city = document.querySelector('#city').value.trim();
-    const state = document.querySelector('#state').value.trim();
+    const city = document.querySelector('#locality').value.trim();
+    const state = document.querySelector('#administrative_area_level_1').value.trim();
     const zip = document.querySelector('#postal_code').value.trim();
     const country = document.querySelector('#country').value.trim();
 
