@@ -142,7 +142,10 @@ body {
     
   }
 
-  
+.w3-button {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
 
 .w3-sidebar a {
     font-family: "Roboto", sans-serif
