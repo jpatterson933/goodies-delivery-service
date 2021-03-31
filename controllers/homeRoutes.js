@@ -172,7 +172,6 @@ router.post('/logout', (req, res) => {
         const userData = await Users.findByPk(req.session.user_id, {
             include: [{ 
                 model: Products,
-                model: Users,
                 through: Cart, 
                 as: 'products'
               }]
@@ -187,7 +186,7 @@ router.post('/logout', (req, res) => {
               }
           const user = userData.get({ plain: true });
 
-          res.render('checkout', {products: user.products, users: users.id})
+          res.render('checkout', {products: user.products })
               } catch (err) {
                   res.status(500).json(err);
                   console.log(err)

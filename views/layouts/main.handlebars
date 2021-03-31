@@ -58,20 +58,27 @@
     <h3 class="w3-wide"><a href="/" id="home-link"><b>Welcome to GoodDeez!</b></a></h3>
   </div>
   <div class="w3-large w3-text-grey" style="font-weight:bold">
+
+    {{!-- {{#if loggedIn}} --}}
+    <a href="/homepage" class="w3-bar-item w3-button">Home</a>
+    <a href="/products" class="w3-bar-item w3-button">Products</a>
+    <a href="/viewnugs" class="w3-bar-item w3-button">deezNUGS</a>
+    {{!-- {{/if}} --}}
+
  
     <a href="/homepage" class="w3-bar-item w3-button">Home</a>
     <a href="/products" class="w3-bar-item w3-button">Products</a>
     <a href="/viewnugs" class="w3-bar-item w3-button">deezNUGS</a>
     <a href="/wishlist" class="w3-bar-item w3-button">Wishlist</a>
-    
+
     <br>
-    {{#if loggedIn}}
+    {{!-- {{#if loggedIn}} --}}
     <a href="/profile" class="w3-bar-item w3-button">Profile</a>
     <a href="/logout" id="logout" class="w3-bar-item w3-button">Logout</a>
-    {{else}}
+    {{!-- {{else}} --}}
     <a id="login" href="/login" class="w3-bar-item w3-button">Login</a>
     <a href="/signup" class="w3-bar-item w3-button">Signup</a>
-    {{/if}}
+    {{!-- {{/if}} --}}
     <br>
     <a href="/aboutus" class="w3-bar-item w3-button w3-padding">About Us</a>
   </div>
@@ -110,7 +117,11 @@
 <header class="w3-container w3-xlarge">
   <p id="main-title" class="row-6">GoodDeez Delivery Service</p>
   {{!-- {{#if loggedIn}} --}}
+
+  <a href= "/cart"><i class="fa fa-shopping-cart w3-margin-right" style="color:white"></a></i>
+
   <a href= "/wishlist"><i class="fa fa-shopping-cart w3-margin-right" style="color:white"></a></i>
+
   {{!-- {{/if}} --}}
 </header>
 
@@ -203,8 +214,10 @@ function w3_close() {
     <script src='/js/signup.js'></script>
     <script src='/js/verify-pw.js'></script>
     <script src='/js/login.js'></script>
+
     <script src = "/js/checkout.js"></script>
     <script src="/js/verify-age.js"></script>
+
 </body>
 </html>
 
