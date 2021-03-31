@@ -23,7 +23,13 @@ Users.belongsToMany(Products, {
     foreignKey:'users_id'
 })
 
+Address.belongsTo(Users, {
+    foreignKey: 'user_id'
+})
 
+Users.hasOne(Address, {
+    foreignKey: 'user_id'
+});
 
 
 module.exports = { 

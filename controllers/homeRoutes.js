@@ -56,9 +56,13 @@ router.get('/login', (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
     try {
         //the user class is found by id and assigned to profile data - it is also finding the user in the current session
-        const profileData = await Users.findByPk(req.session.user_id);
+        const profileData = await Users.findByPk(req.session.user_id, {
+            include: [{ model: Address}]
+          });
         //graps profile data WITHOUT metadata
         const profile = profileData.get({ plain: true });
+
+        console.log(profile)
         //render the profile.handlebars page and assigns the profile variable and we can then render the User class properties using {{}}
         res.render('profile',  profile );
     } catch (err) {
