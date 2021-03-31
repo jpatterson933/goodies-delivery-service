@@ -154,7 +154,8 @@ router.post('/logout', (req, res) => {
             
             console.log(userData)
                 if (!userData) {
-                    res.status(404).json({ message: 'No cart found with this id!' });
+                    res.render('emptycart')
+                    // res.status(404).json({ message: 'No cart found with this id!' });
                     return;
                 }
             const user = userData.get({ plain: true });
