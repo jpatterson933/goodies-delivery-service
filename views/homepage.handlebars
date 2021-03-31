@@ -39,21 +39,25 @@ function showSlides() {
 
 
 
-<section class = "One">
 
     
-<div class="card2" >
-    <h1>Deal of the day:</h1>
-  <img src="{{image}}" alt="{{name}}" class="img-card" style="width:100%">
-  <h3>{{name}}</h3>
-  <p class="price">${{price}}</p>
+    <section class="prod-container">
+<div class="card">
+  <div class="img-container">
+  <img src="{{image}}" alt="{{name}}" class="image" style="width:100%">
+  <div class="middle">
+    <h3 class="img-text">Made by:  {{brand}}</h3>
+  </div>
+  </div>
+  <div class = "card-text">
+  <h1>{{name}}</h1>
   <p>{{thc}} THC</p>
-  <p><button>Add to Cart</button></p>
-
+  <p class="price">${{price}}</p>
+  <p><button data-id="{{id}}">Add to Cart</a></button></p>
+  </div>
 </div>
 
 </section>
-
 
 
 
