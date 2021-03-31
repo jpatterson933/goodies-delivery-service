@@ -123,6 +123,10 @@ router.get('/aboutus', (req, res) => {
     res.render('aboutus')
 })
 
+router.get('/viewnugs', (req, res) => {
+    res.render('viewnugs')
+})
+
 //this is our logout function that essentially destroys the dession
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
