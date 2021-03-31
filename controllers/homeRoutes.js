@@ -98,7 +98,7 @@ router.get('/contact', (req, res) => {
     res.render('contact')
 })
 
-router.post('/cart', async (req, res) => {
+router.post('/wishlist', async (req, res) => {
     try {
         console.log(req.body);
         console.log('hello')
@@ -140,7 +140,7 @@ router.post('/logout', (req, res) => {
   });
 
 
-  router.get('/cart', async (req, res) => {
+  router.get('/wishlist', async (req, res) => {
       try {
           const userData = await Users.findByPk(req.session.user_id, {
               include: [{ 
