@@ -46,6 +46,3 @@ var placeSearch, autocomplete;
 				});
 			}
 		};
-
-
-    // jasf

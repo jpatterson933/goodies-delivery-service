@@ -15,11 +15,11 @@ const signupForm = async (event) => {
     const country = document.querySelector('#country').value.trim();
 
 //send user id to response
-    if (type && email && password && name && birth && cell && street && city && state && zip && country){
+    if (email && password && name && birth && cell ){
         console.log("we made it");
         fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({ type, email, password, name, birth, cell}),
+            body: JSON.stringify({ email, password, name, birth, cell}),
             headers: {'Content-Type': 'application/json'},
         }).then(response => {
 

@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     res.json(userData) 
 })
 
-//this oute is a post route that will 
+//this route is a post route that will 
 router.post('/', async (req, res) => {
      
       console.log(req.body)

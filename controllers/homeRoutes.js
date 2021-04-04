@@ -43,12 +43,7 @@ router.get('/products/:id', async (req, res) => {
 
 });
 router.get('/login', (req, res) => {
-    // If the user is already logged in, redirect the request to another route
-    // if (req.session.logged_in) {
-    //   res.redirect('/profile');
-    //   return;
-    // }
-    //when the login page is searched it will render the handlebars page login - nothing is assigned to it unlike the previoous two routes
+
     res.render('login');
   });
 
@@ -106,10 +101,7 @@ router.post('/wishlist', async (req, res) => {
     } catch (err) {
         res.status(400).json(err);
     }
-})
-
-
-// Create get route that has over21 boolean. If over21, then render /homepage. '/' route needs to be over21 page, and will redirect
+});
 
 router.get('/signup', (req, res) => {
     res.render('signup')
@@ -190,20 +182,6 @@ router.post('/logout', (req, res) => {
                   console.log(err)
               }
 });
-
-// router.post('/checkout', async (req, res) => {
-//     try {
-//         console.log(req.body);
-//         console.log('hello')
-//         const id = parseInt(req.body.id)
-//         const cartData = await Cart.create( {products_id: id, users_id:req.session.user_id} );
-
-//         res.status(200).json(cartData);
-    
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// })
 
 
 
