@@ -1,25 +1,20 @@
 let loginForm = async (event) => {
     event.preventDefault();
-
     const email = document.querySelector('#emailLogin').value.trim();
     const password  = document.querySelector('#passwordLogin').value.trim();
-
     if (email && password) {
         const response = await fetch('/api/users/login', {
             method: 'POST',
             body: JSON.stringify({ email, password}),
             headers: {'Content-Type': 'application/json'},
         });
-        if (response.ok) {
-            document.location.replace('/profile');
+        if (!response.ok) {
+          alert('FAIL TRY AGAIN!');
         } else {
-            alert('FAIL TRY AGAIN!');
+          document.location.replace('/profile');
         }
     }
 };
-
-
-
 const logout = async () => {
     console.log("testing")
     // Make a POST request to destroy the session on the back end
@@ -35,9 +30,7 @@ const logout = async () => {
       document.location.replace('/login')
     }
   };
-
   document.querySelector('#logout').addEventListener('click', logout);
-
 document
     .querySelector('.loginForm')
     .addEventListener('submit', loginForm);

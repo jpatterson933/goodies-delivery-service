@@ -32,6 +32,3 @@ document
     .addEventListener('click', showProducts)
 
 grabProducts()
-
-
-
