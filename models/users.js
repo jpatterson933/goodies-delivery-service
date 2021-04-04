@@ -18,10 +18,6 @@ Users.init (
             primaryKey: true,
             autoIncrement: true,
         },
-        type: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,

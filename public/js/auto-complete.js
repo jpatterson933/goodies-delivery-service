@@ -7,7 +7,6 @@ var placeSearch, autocomplete;
 			country: 'long_name',
 			postal_code: 'short_name'
 		};
-
 		function initAutocomplete() {
 			autocomplete = new google.maps.places.Autocomplete(
 				(document.getElementById('autocomplete')), {
@@ -15,7 +14,6 @@ var placeSearch, autocomplete;
 				});
 			autocomplete.addListener('place_changed', fillInAddress);
 		}
-
 		function fillInAddress() {
 			var place = autocomplete.getPlace();
 			for (var component in componentForm) {
@@ -30,7 +28,6 @@ var placeSearch, autocomplete;
 				}
 			}
 		}
-
 		function geolocate() {
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(function(position) {
@@ -46,6 +43,3 @@ var placeSearch, autocomplete;
 				});
 			}
 		};
-
-
-    // jasf
