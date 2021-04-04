@@ -1,8 +1,8 @@
 function checkout() {
-    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-    for (var i = 0; i < removeCartItemButtons.length; i++) {
-        var button = removeCartItemButtons[i]
-        button.addEventListener('click', removeCartItem)
+    var deleteItems = document.getElementsByClassName('btn-danger')
+    for (var i = 0; i < deleteItems.length; i++) {
+        var button = deleteItems[i]
+        button.addEventListener('click', deleteItem)
     }
     var quantityInputs = document.getElementsByClassName('cart-quantity-input')
     for (var i = 0; i < quantityInputs.length; i++) {
@@ -17,9 +17,9 @@ function checkout() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 function purchaseClicked() {
-    var cartItems = document.getElementsByClassName('cart-items')[0]
-    while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
+    var items = document.getElementsByClassName('cart-items')[0]
+    while (items.hasChildNodes()) {
+        items.removeChild(items.firstChild)
     }
     updateCartTotal()
 }
@@ -46,10 +46,10 @@ function addToCartClicked(event) {
 function addItemToCart(title, price) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
-    var cartItems = document.getElementsByClassName('cart-items')[0]
-    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
-    for (var i = 0; i < cartItemNames.length; i++) {
-        if (cartItemNames[i].innerText == title) {
+    var items = document.getElementsByClassName('cart-items')[0]
+    var itemNames = items.getElementsByClassName('cart-item-title')
+    for (var i = 0; i < itemNames.length; i++) {
+        if (itemNames[i].innerText == title) {
             return
         }
     }
@@ -63,13 +63,13 @@ function addItemToCart(title, price) {
             <button class="btn btn-danger" type="button">REMOVE</button>
         </div>`
     cartRow.innerHTML = cartRowContents
-    cartItems.append(cartRow)
-    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    items.append(cartRow)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', deleteItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
-    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    var itemContainer = document.getElementsByClassName('cart-items')[0]
+    var cartRows = itemContainer.getElementsByClassName('cart-row')
     var total = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
