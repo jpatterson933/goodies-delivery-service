@@ -23,35 +23,5 @@ router.post('/', async (req, res) => {
     }
   });
 
-//   router.get('/profile', async (req, res) => {
-//     try {
-//         const userData = await Users.findByPk(req.session.user_id, );
-//           console.log(userData)
-//               if (!userData) {
-//                   res.status(404).json({ message: 'No cart found with this id!' });
-//                   return;
-//               }
-//           const user = userData.get({ plain: true });
-
-//           res.render(''{address: user.address })
-//               } catch (err) {
-//                   res.status(500).json(err);
-//                   console.log(err)
-//               }
-// });
-
-// router.post('/profile', async (req, res) => {
-//   try {
-//       console.log(req.body);
-//       console.log('hello')
-//       const id = req.body.id
-//       const addressData = await Address.create( {address_street: id, users_id:req.session.user_id} );
-
-//       res.status(200).json(addressData);
-  
-//   } catch (err) {
-//       res.status(400).json(err);
-//   }
-// })
 
 module.exports = router

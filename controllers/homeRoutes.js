@@ -191,20 +191,6 @@ router.post('/logout', (req, res) => {
               }
 });
 
-// router.post('/checkout', async (req, res) => {
-//     try {
-//         console.log(req.body);
-//         console.log('hello')
-//         const id = parseInt(req.body.id)
-//         const cartData = await Cart.create( {products_id: id, users_id:req.session.user_id} );
-
-//         res.status(200).json(cartData);
-    
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// })
-
 
 
 module.exports = router;
