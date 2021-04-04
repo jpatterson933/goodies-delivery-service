@@ -1,9 +1,7 @@
 let loginForm = async (event) => {
     event.preventDefault();
-
     const email = document.querySelector('#emailLogin').value.trim();
     const password  = document.querySelector('#passwordLogin').value.trim();
-
     if (email && password) {
         const response = await fetch('/api/users/login', {
             method: 'POST',
@@ -17,9 +15,6 @@ let loginForm = async (event) => {
         }
     }
 };
-
-
-
 const logout = async () => {
     console.log("testing")
     // Make a POST request to destroy the session on the back end
@@ -35,9 +30,7 @@ const logout = async () => {
       document.location.replace('/login')
     }
   };
-
   document.querySelector('#logout').addEventListener('click', logout);
-
 document
     .querySelector('.loginForm')
     .addEventListener('submit', loginForm);

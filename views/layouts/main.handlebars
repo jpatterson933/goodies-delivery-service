@@ -69,7 +69,7 @@
     <br>
     {{!-- {{#if loggedIn}} --}}
     <a href="/profile" class="w3-bar-item w3-button">Profile</a>
-    <a href="/logout" id="logout" class="w3-bar-item w3-button">Logout</a>
+    <a id="logout" class="w3-bar-item w3-button">Logout</a>
     {{!-- {{else}} --}}
     <a id="login" href="/login" class="w3-bar-item w3-button">Login</a>
     <a href="/signup" class="w3-bar-item w3-button">Signup</a>
@@ -80,19 +80,14 @@
 </nav>
 
 <style>
-.parallax {
-  /* The image used */
-  background-image: url("../images/growing-marijuana.jpg");
-
-  /* Set a specific height */
-  min-height: 200px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  .parallax {
+    background-image: url("../images/growing-marijuana.jpg");
+    min-height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 </style>
 
 <div class="parallax" style="text-align: center; color: white">

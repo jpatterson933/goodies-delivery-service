@@ -1,4 +1,3 @@
-
 const signupForm = async (event) => {
     event.preventDefault();
 
@@ -22,13 +21,8 @@ const signupForm = async (event) => {
             body: JSON.stringify({ email, password, name, birth, cell}),
             headers: {'Content-Type': 'application/json'},
         }).then(response => {
-
             return response.json();
-
         }).then(data => {
-
-            console.log(data)
-
             fetch('/api/address', {
                 method: 'POST',
                 //pass response.id to this so it will connect our keys
@@ -36,23 +30,18 @@ const signupForm = async (event) => {
                 //this is saying that we are sending json with this post request
                 headers: {'Content-Type': 'application/json'},
             }).then(response => {
-
                 if (response.ok) {
                     document.location.replace('/profile');
                 } else {
                     alert('Failed to sign-up :(');
                 }
-
             })
         })
     }  
-
     if (password !== verifyPassword) {
         alert("Your passwords do not match!")
     }
 };
-
-
 document
     .querySelector('.signup-form')
     .addEventListener('submit', signupForm);
