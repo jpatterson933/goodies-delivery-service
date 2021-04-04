@@ -12,9 +12,4 @@ router.post('/', async (req, res) => {
       res.status(400).json(err);
     }
   });
-<<<<<<< HEAD
-
-
-=======
->>>>>>> d137286075f64771722f8b6d35d157bb7ee77f23
 module.exports = router
