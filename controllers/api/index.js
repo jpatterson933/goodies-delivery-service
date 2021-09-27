@@ -3,7 +3,7 @@
 //require the express router
 const router = require('express').Router();
 //we grab the api for our products
-const productsApi = require('./products-api-grab');
+// const productsApi = require('./products-api-grab');
 //we grab the api for our users
 const userRoutes = require('./userRoutes');
 //we grab the api for our address
@@ -11,7 +11,7 @@ const addressRoutes = require('./addressRoutes')
 
 //these three lines of code make sure that we use each of those routes for the pre defined url
 router.use('/users', userRoutes);
-router.use('/products', productsApi);
+// router.use('/products', productsApi);
 router.use('/address', addressRoutes)
 
 module.exports = router;
